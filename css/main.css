@@ -1,0 +1,273 @@
+* {
+    font-family: SimHei;
+    box-sizing:border-box;
+}
+header{
+	 background: url(../img/bg2.jpg);/*一定要注意是上一级目录*/
+    background-size: cover;
+    /*box-shadow: 0 700px 0 0 rgba(0, 0, 0, 0.2) inset;/*实现遮罩的效果*/
+    background-attachment: fixed;/*这样背景图片就不会动了*/
+
+}
+/*#nav {
+    background: #000;
+    height: 80px;
+    position: fixed;/*让导航栏一直在上面*/
+   /* width: 100%;
+    z-index: 1;
+}*/
+
+#banner {
+    height: 700px;
+   /*background: transparent;*/
+    background: rgba(0,0,0,0.2);/*这句放在这里也能实现这种遮罩的效果*/
+    color: #fff;
+
+}
+
+/*nav ul {
+    list-style: none;
+    /*去掉li前面的点*/
+   /* margin: 0;
+    float: right;
+
+}
+
+nav ul li ,nav .logo{
+    display: inline-block;
+    line-height: 80px;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    line-height: 50px;
+    text-decoration: none;
+
+    display: inline-block;/*不仅仅只有这个字可以点击 其附近的空白处都可以点击*/
+   /* height: inherit;/*要是我原来估计只能写成button 或者 div*/
+    /*继承母元素的高度*/
+    /*color: #fff;
+}
+*/
+#banner .inner{
+	max-width: 500px;/*设置inner的宽度*/
+	margin: 0 auto; /*上下为0，左右为auto 使其居中*/
+	text-align: center;
+
+	position: relative;
+	top: 160px;/*往下来一点*/
+	font-size: 20px;
+}
+#banner .inner h1{
+	margin: 0;/*有多余的行高*/
+}
+#banner .inner p{
+	line-height: 20px;
+	margin: 10px;
+}
+button{
+	outline: none;/*去除button点击过后的外边框*/
+	border: none;
+	background: #333;/*背景颜色*/
+	color: #eee;/*文字颜色*/
+	/*margin: 20px;*/
+}
+
+#banner button{
+	border-radius: 5px;
+	position: relative;
+	padding:25px 50px;
+	margin-top: 250px;
+	font-size: 28px;
+	letter-spacing: 5px;
+
+}
+#banner button:before{
+	border-radius: 5px;
+	content: '';
+	position: absolute;
+	top:0;
+	left: 0;
+	background:#eee;
+	width: 0%;
+	height: 100%;
+	transition:all .2s ease;
+	
+}
+#banner button:hover{
+	color: #333;
+}
+#banner button:hover:before{
+	width: 100%;
+}
+/*z-index叠加 由于是postion：realtive所以按次序覆盖在上面*/
+#banner button span{
+	position: relative;
+}
+/*.logo{*/
+	/*font-size: 20px;*/
+	/*font-weight: 700;*/
+	/*letter-spacing: 1px;/*字符间的空格*/
+	/*margin-left: 20px;*/
+	/**/
+/*}*/
+/*.logo a{*/
+	/*line-height: 50px;*/
+    /*text-decoration: none;*/
+	/*color: #fff;*/
+/*}*/
+
+#recommend{
+	text-align: center;
+	background-color: rgb(54, 195, 152);
+	color: #fff;
+	padding: 100px 0;
+}
+.wrapper{
+	max-width: 1080px;
+	margin: 0 auto;
+
+}
+#recommend .hr{
+ width: 100%;
+ margin: 20px auto;
+ height: 2px;
+ background: rgb(47, 147, 79);
+}
+.icon-group{
+	padding: 50px;
+}
+.icon-group .icon{
+	display: inline-block;
+	height: 80px;
+	width: 80px;
+	background: #fff;
+	transform:rotate(45deg);
+	margin: 20px;
+}
+
+.show-preview .img-section{
+	width: 45%;
+}
+.img-section img{
+	max-width: 100%;
+}
+
+.text-section{
+	width: 55%;
+	text-align: left;
+	position: relative;
+	top: 100px;
+}
+.text-section >*{
+	max-width: 90%;/*text下的所有元素的宽度不能超高text的90%*/
+	margin-left: 60px;
+	margin-right: 60px;
+}
+.text-section h2{
+	margin-bottom: 20px;
+	font-size: 30px;
+}
+.text-section p{
+	line-height: 30px;
+	font-size: 16px;
+}
+#pro-show{
+	background: #2F2828;
+	color: #fff;
+}
+.show-preview >div{/*还可以这样写！使文字和图片并列*/
+	float: left;
+}
+.show-preview{
+	font-size: 0px;
+}
+.show-preview:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.show-preview:nth-child(odd){
+	background: #333;/*只要是奇数 背景颜色就这个*/
+}
+
+#skill{
+	background: #A871B2;
+	color: #fff;
+	padding: 100px 200px;
+}
+.heading{
+	max-width: 1080px;
+	margin: 20px auto;
+	text-align: center;
+	letter-spacing: 1px;
+}
+.heading .hr{
+	width: inherit;
+	height: 2px;
+	background: #fff;
+	margin: 20px auto;
+}
+.card-group{
+font-size: 0px;
+
+}
+.card-group .card{
+	overflow: hidden;/*要不然盒子会乱*/
+	display: inline-block;
+	width: 50%;
+	min-height:300px; 
+	font-size: 20px;
+	text-align: center;
+	padding: 20px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;/*简直太棒了！ http://www.cnblogs.com/wangfupeng1988/p/4287292.html*/
+}
+.card-group .card:first-child{
+	background: rgba(0,0,0,0.04);/*颜色稍微加深一点*/
+}
+.card-group .card:nth-child(2)
+{
+		background: rgba(0,0,0,0.08);/*颜色稍微加深一点*/
+
+}
+.card-group .card:nth-child(3)
+{
+		background: rgba(0,0,0,0.12);/*颜色稍微加深一点*/
+
+}
+.card-group .card:nth-child(4)
+{
+		background: rgba(0,0,0,0.16);/*颜色稍微加深一点*/
+
+}
+.card-group .card:nth-child(5)
+{
+		background: rgba(0,0,0,0.20);/*颜色稍微加深一点*/
+
+}
+.card-group .card:nth-child(6)
+{
+		background: rgba(0,0,0,0.24);/*颜色稍微加深一点*/
+
+}
+footer{
+	background: #333;
+	color:#fff;
+		min-height: 200px;
+		text-align: center;
+}
+.share-group{
+	display: block;
+	width: 1080px;
+	margin:0 auto;
+	padding: 50px;
+}
+.share-group li{
+	display: inline-block;
+	padding: 10px;
+}
+.copy{
+	padding-bottom: 20px;
+}

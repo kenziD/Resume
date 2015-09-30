@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Resume|kenziD</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="normlize css/normlize.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	
+    <header>
+        <!--页头开始-->
+        <!-- <nav id="nav">
+            <span class="logo"><a href="#">KENZI</a></span>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">链接1</a></li>
+                <li><a href="#">链接2</a></li>
+            </ul>
+        </nav> -->
+        <div id="banner">
+            <div class="inner">
+                <h1>KenziD</h1>
+                <p>A Girl Who love Web Design and Programming</p>
+                
+                <a ><button onclick="scrollToPage2();return false;"><span>MORE</span></button></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- <div class="content"> -->
+        <section id="recommend">
+            <div class="wrapper">
+                <h2>标题</h2>
+                <div class="hr">
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, eius labore laborum fugit quasi quo nihil voluptatum veritatis fugiat maiores placeat vero velit repudiandae magnam laboriosam et? Ad, accusantium, repudiandae.</p>
+            </div>
+            <div class="icon-group">
+                <span class="icon">item1</span>
+                <span class="icon">item1</span>
+                <span class="icon">item1</span>
+            </div>
+        </section>
+        <section id="pro-show">
+            <div class="show-preview">
+                <div class="img-section">
+                    <img src="img/1.jpg" alt="">
+                </div>
+                <div class="text-section">
+                    <h2>标题2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perferendis consequuntur praesentium quisquam voluptas vero earum nihil repellendus consequatur numquam? Nihil optio expedita, consequuntur officia repellat, ipsa et molestiae maxime.</p>
+                </div>
+            </div>
+            <div class="show-preview">
+                <div class="text-section">
+                    <h2>标题2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perferendis consequuntur praesentium quisquam voluptas vero earum nihil repellendus consequatur numquam? Nihil optio expedita, consequuntur officia repellat, ipsa et molestiae maxime.</p>
+                </div>
+                <div class="img-section">
+                    <img src="img/2.jpg" alt="">
+                </div>
+            </div>
+            <div class="show-preview">
+                <div class="img-section">
+                    <img src="img/3.jpg" alt="">
+                </div>
+                <div class="text-section">
+                    <h2>标题2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perferendis consequuntur praesentium quisquam voluptas vero earum nihil repellendus consequatur numquam? Nihil optio expedita, consequuntur officia repellat, ipsa et molestiae maxime.</p>
+                </div>
+            </div>
+        </section>
+        <section id="skill">
+            <div class="heading">
+                <h2>有一个标题</h2>
+                <div class="hr"></div>
+                <div class="subheading">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, magni soluta excepturi! Nihil error ex, asperiores inventore quam perspiciatis, praesentium harum! Quibusdam labore voluptatem sunt beatae tempore ratione neque a!
+                    </p>
+                </div>
+            </div>
+            <div class="card-group">
+                <div class="card">card Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus velit ut debitis, alias aut aperiam, quaerat assumenda voluptas magni molestiae libero doloribus neque obcaecati nobis. Ad sunt dolorem esse repudiandae!</div>
+                <div class="card">card Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias facilis neque, officiis. Inventore saepe reprehenderit placeat. Cupiditate nobis ratione aliquid, quisquam eaque in repellendus nam sapiente asperiores est molestias vero.</div>
+                <div class="card">card Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat est excepturi ipsam qui fuga impedit reiciendis quae maxime saepe quod quam vitae, explicabo dicta voluptatibus aspernatur placeat consequatur optio!</div>
+                <div class="card">card Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus nam itaque odio, quo, quod iure cum quam unde quaerat rem nesciunt at natus fugit molestias. Ut quibusdam, maiores quae reprehenderit?</div>
+                <div class="card">card Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae accusamus perferendis, ab nisi? Adipisci ipsum sed magni ipsa corporis saepe aut commodi nesciunt nostrum eveniet laudantium rem soluta voluptatem, inventore.</div>
+                <div class="card">card Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus suscipit, necessitatibus nisi exercitationem illum? Cum quia, harum sequi sit eius, voluptas velit asperiores corrupti, vero fugiat ratione tempore ea sed!</div>
+            </div>
+        </section>
+    <!-- </div> -->
+    <footer>
+        <ul class="share-group">
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+        </ul>
+        <div class="copy">
+        	&copy kenziD
+        </div>
+    </footer>
+</body>
+<script type="text/javascript">
+// 按键控制滚动条滑动页面
+	var timeOut;
+	function scrollToPage2() {
+    if (document.body.scrollTop < 700) {
+        window.scrollBy(0, 50);
+        timeOut = setTimeout('scrollToPage2()', 20);
+    } else {
+        clearTimeout(timeOut);
+    }
+}
+
+</script>
+</html>

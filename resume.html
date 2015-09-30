@@ -105,17 +105,14 @@
         </div>
     </footer>
 </body>
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript">
-// 按键控制滚动条滑动页面
-	var timeOut;
-	function scrollToPage2() {
-    if (document.body.scrollTop < 700) {
-        window.scrollBy(0, 50);
-        timeOut = setTimeout('scrollToPage2()', 20);
-    } else {
-        clearTimeout(timeOut);
-    }
-}
+function scrollToPage2() {
+    var $page2 = $("#recommend");
+    var offset = $page2.offset();
+    console.log(offset.top);
+    $('html,body').animate({scrollTop: offset.top}, 1000);
+};
 
 </script>
 </html>

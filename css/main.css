@@ -374,12 +374,11 @@ button {
 
 .glass{
     text-align: left;
-    height: 50px;
-    width: 100px;
+    height: 100px;
+    width: 200px;
     background: url(../img/waves.png);
     background-position: top right;
     /*background: #fff;*/
-    max-height: 50px;
     position: absolute;
     bottom: 0px;
     right: 0px;

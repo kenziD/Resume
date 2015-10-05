@@ -8,29 +8,21 @@ header {
     /*一定要注意是上一级目录*/
     background-size: cover;
     /*box-shadow: 0 700px 0 0 rgba(0, 0, 0, 0.2) inset;/*实现遮罩的效果*/
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
     /*这样背景图片就不会动了*/
 }
 
+a{
+    text-decoration: none;
+}
 
-/*#nav {
+#nav {
     background: #000;
     height: 80px;
     position: fixed;/*让导航栏一直在上面*/
-
-
-/* width: 100%;
+    width: 80px;
     z-index: 1;
-}*/
-
-#banner {
-    height: 700px;
-    /*background: transparent;*/
-    background: rgba(0, 0, 0, 0.2);
-    /*这句放在这里也能实现这种遮罩的效果*/
-    color: #fff;
 }
-
 
 /*nav ul {
     list-style: none;
@@ -64,6 +56,14 @@ nav ul li a {
 /*color: #fff;
 }
 */
+/***********************banner*********************/
+#banner {
+    height: 700px;
+    /*background: transparent;*/
+    background: rgba(0, 0, 0, 0.2);
+    /*这句放在这里也能实现这种遮罩的效果*/
+    color: #fff;
+}
 
 #banner .inner {
     max-width: 500px;
@@ -95,7 +95,6 @@ button {
     /*背景颜色*/
     color: #eee;
     /*文字颜色*/
-    
 }
 
 #banner button {
@@ -120,6 +119,11 @@ button {
     width: 0%;
     height: 100%;
     color: #eee;
+    /*another button style*/
+   /* background: url(../img/more.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 0;*/
     transition: width .4s ease;
 }
 
@@ -130,6 +134,7 @@ button {
 
 #banner button:hover:before {
     width: 100%;
+    /*opacity: 1;*/
 }
 
 
@@ -175,9 +180,12 @@ button {
 
 /*}*/
 
+
+
+/***************************RECOMMEND**********************/
 #recommend {
     text-align: center;
-    background-color: rgb(54, 195, 152);
+    background-color: #171D25;
     color: #fff;
     padding: 100px 0;
 }
@@ -195,18 +203,45 @@ button {
 }
 
 .icon-group {
-    padding: 50px;
+    padding: 50px 50px 0 50px;
 }
 
 .icon-group .icon {
     display: inline-block;
-    height: 80px;
-    width: 80px;
-    background: #fff;
-    transform: rotate(45deg);
-    margin: 20px;
+    height: 180px;
+    width: 180px;
+    margin: 0 80px;
+    border-radius: 50%;
+    transition:transform .5s,opacity .5s;
 }
 
+.icon1 {
+    opacity: 0;
+    background: url(../img/github2.png);
+    background-size: cover;
+    transform: translateX(250px);
+
+}
+.icon2 {
+    background: url(../img/logo.png);
+    background-size: cover;
+}
+.icon3 {
+    opacity: 0;
+    background: url(../img/twitter.png);
+    background-size: cover;
+    transform: translateX(-250px);
+}
+.icon-name{
+    opacity: 0;
+    font-size: 30px;
+    display: inline-block;
+    margin:10px 130px;
+    transition:opacity .8s;
+}
+
+
+/*********************************pro-show*******************/
 .show-preview .img-section {
     width: 45%;
 }
@@ -264,6 +299,7 @@ button {
     /*只要是奇数 背景颜色就这个*/
 }
 
+/***********************************SKILL************************/
 #skill {
     background: #A871B2;
     color: #fff;
@@ -289,6 +325,7 @@ button {
 }
 
 .card-group .card {
+    position: relative;
     overflow: hidden;
     /*要不然盒子会乱*/
     display: inline-block;
@@ -333,6 +370,25 @@ button {
     /*颜色稍微加深一点*/
 }
 
+.glass{
+    text-align: left;
+    height: 50px;
+    width: 100px;
+    background: url(../img/waves.png);
+    background-position: top right;
+    /*background: #fff;*/
+    max-height: 50px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    transition: all 2s;
+}
+
+.glass:hover{
+    height: 300px;
+    background-position: top left;
+}
+/**********************************footer******************/
 footer {
     background: #333;
     color: #fff;

@@ -2,11 +2,14 @@
     font-family: SimHei;
     box-sizing: border-box;
 }
-
+body,html{
+    height:100%;
+}
 header {
     background: url(../img/bg2.jpg);
     /*一定要注意是上一级目录*/
     background-size: cover;
+    height: 100%;
     /*box-shadow: 0 700px 0 0 rgba(0, 0, 0, 0.2) inset;/*实现遮罩的效果*/
 
     /*background-attachment: fixed;*/
@@ -60,7 +63,7 @@ nav ul li a {
 */
 /***********************banner*********************/
 #banner {
-    height: 700px;
+    min-height: 100%;
     /*background: transparent;*/
     background: rgba(0, 0, 0, 0.2);
     /*这句放在这里也能实现这种遮罩的效果*/
@@ -186,6 +189,7 @@ button {
 
 /***************************RECOMMEND**********************/
 #recommend {
+    min-height: 100%;
     text-align: center;
     background-color: #171D25;
     color: #fff;

@@ -5,6 +5,7 @@
     <title>Resume|kenziD</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="normlize css/normlize.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome-4.4.0/css/font-awesome.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -12,7 +13,7 @@
     <header>
         <!--页头开始-->
         <nav id="nav">
-            <button></button>
+        <a id="nav-bar" href = "#" class="fa fa-bars fa-3x"></a>
         </nav>
         <div id="banner">
             <div class="inner">
@@ -137,6 +138,13 @@ $(window).scroll(function() {
         });
     }
 });
+$(".fa").click(function(){
+    $(".fa-bars").fadeOut(function(){$(".fa-bars").attr('class', 'fa fa-times fa-3x').fadeIn();})
+});
+$(".fa").click(function(){
+     $(".fa-times").fadeOut(function(){$(".fa-times").attr('class', 'fa fa-bars fa-3x').fadeIn();})
+});
+
 </script>
 
 </html>

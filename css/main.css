@@ -20,15 +20,21 @@ header {
 a{
     text-decoration: none;
 }
-
+a:link {color: #fff}     /* 未访问的链接 */
+a:visited {color: #fff}  /* 已访问的链接 */
+a:hover {color: #fff}    /* 鼠标移动到链接上 */
+a:active {color: #fff}   /* 选定的链接 */
 #nav {
-    background: #000;
     height: 80px;
     position: fixed;/*让导航栏一直在上面*/
     width: 80px;
     z-index: 1;
 }
-
+#nav-bar{
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 20px;
+}
 /*nav ul {
     list-style: none;
     /*去掉li前面的点*/

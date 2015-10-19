@@ -13,7 +13,13 @@
     <header>
         <!--页头开始-->
         <nav id="nav">
-        <a id="nav-bar" href = "#" class="fa fa-bars fa-3x"></a>
+        <div id="hamburger">
+	        <div class="nav up"></div>
+			<div class="nav middle"></div>
+			<div class="nav down"></div>
+		</div>
+		<div id="mask-nav">
+		</div>
         </nav>
         <div id="banner">
             <div class="inner">
@@ -144,7 +150,31 @@ $(".fa").click(function(){
 $(".fa").click(function(){
      $(".fa-times").fadeOut(function(){$(".fa-times").attr('class', 'fa fa-bars fa-3x').fadeIn();})
 });
+$('#hamburger').click(function() {
+	$('#mask-nav').css('transform','translateX(0)');
+	$('.up').css('transform','rotate(45deg)');
+	$('.up').css('transform-origin','0 5px');
+		// body...
+		$('.down').css('transform','rotate(-45deg)');
+	$('.down').css('transform-origin','0 5px');
+	$('.middle').css('opacity','0');
+	 setTimeout(function(){
+       $('#hamburger').addClass('close');
+   }, 500);
+	});
 
+	$('body').delegate('.close',"click",function(){
+		$('#mask-nav').css('transform','translateX(-400px)');
+			$('.up').css('transform','rotate(0deg)');
+	$('.up').css('transform-origin','0 5px');
+		// body...
+		$('.down').css('transform','rotate(0deg)');
+	$('.down').css('transform-origin','0 5px');
+	$('.middle').css('opacity','1');
+	 setTimeout(function(){
+       $('#hamburger').removeClass('close');
+   }, 500);
+	});
 </script>
 
 </html>

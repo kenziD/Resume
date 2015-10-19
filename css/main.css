@@ -333,10 +333,11 @@ button {
     /*只要是奇数 背景颜色就这个*/
 }
 
+
 /***********************************SKILL************************/
 #skill {
-    background: #A871B2;
-    color: #fff;
+    background: #fff;
+    color: #000;
     padding: 100px 200px;
 }
 
@@ -356,9 +357,12 @@ button {
 
 .card-group {
     font-size: 0px;
+     z-index: -2;
 }
 
 .card-group .card {
+    line-height: 300px;
+    z-index: 1;
     position: relative;
     overflow: hidden;
     /*要不然盒子会乱*/
@@ -374,53 +378,241 @@ button {
     /*简直太棒了！ http://www.cnblogs.com/wangfupeng1988/p/4287292.html*/
 }
 
-.card-group .card:first-child {
-    background: rgba(0, 0, 0, 0.04);
-    /*颜色稍微加深一点*/
-}
 
-.card-group .card:nth-child(2) {
-    background: rgba(0, 0, 0, 0.08);
-    /*颜色稍微加深一点*/
-}
 
-.card-group .card:nth-child(3) {
-    background: rgba(0, 0, 0, 0.12);
-    /*颜色稍微加深一点*/
-}
+.circle{
 
-.card-group .card:nth-child(4) {
-    background: rgba(0, 0, 0, 0.16);
-    /*颜色稍微加深一点*/
-}
+            box-sizing:border-box;
+            width: 100px;
+            height: 200px;
+            background:white;
+            position: absolute;
+            top: 50%;
+            margin-top: -100px;
+            left: 50%;
+            margin-left: -100px;
+        }
+        .circle1{
+            animation:myRotate1 2s  linear forwards;
+            -webkit-animation:myRotate1 2s  linear forwards;
+        }
+        .circle2{
+            animation:myRotate2 2s  linear forwards;
+            -webkit-animation:myRotate2 2s  linear forwards;
+        }
+        .circle3{
+            animation:myRotate3 2s  linear forwards;
+            -webkit-animation:myRotate3 2s  linear forwards;
+        }
+        .circle4{
+            animation:myRotate4 2s  linear forwards;
+            -webkit-animation:myRotate4 2s  linear forwards;
+        }
+        .circle5{
+            animation:myRotate5 2s  linear forwards;
+            -webkit-animation:myRotate5 2s  linear forwards;
+        }
+        .circle6{
+            animation:myRotate6 2s  linear forwards;
+            -webkit-animation:myRotate6 2s  linear forwards;
+        }
+        .circle:before,.circle:after{
+            box-sizing:border-box;
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 200px;
+            border: solid;
+            border-width:10px 0 10px 10px;
+            border-color:#0cf;
+            border-radius: 100px 0 0 100px;/*画半圆*/
+            background:white;
+        }
+        .circle:before{
+            transform:rotate(0deg);
+            transform-origin:100px 100px;
+            /*transition:transform 1s;*/
+        }
+        .circle:after{
+            transform:rotate(180deg);
+            transform-origin:100px 100px;
+            opacity: 0;
+        }
+        .circle1:before{
+            animation:myRotate-before1 2s  linear forwards;
+            -webkit-animation:myRotate-before1 2s  linear forwards;
+        }
+        .circle2:before{
+            animation:myRotate-before2 2s  linear forwards;
+            -webkit-animation:myRotate-before2 2s  linear forwards;
+        }
+        .circle3:before{
+            animation:myRotate-before3 2s  linear forwards;
+            -webkit-animation:myRotate-before3 2s  linear forwards;
+        }
+        .circle4:before{
+            animation:myRotate-before4 2s  linear forwards;
+            -webkit-animation:myRotate-before4 2s  linear forwards;
+        }
+        .circle5:before{
+            animation:myRotate-before5 2s  linear forwards;
+            -webkit-animation:myRotate-before5 2s  linear forwards;
+        }
+        .circle6:before{
+animation:myRotate-before6 2s  linear forwards;
+            -webkit-animation:myRotate-before6 2s  linear forwards;
+        }
 
-.card-group .card:nth-child(5) {
-    background: rgba(0, 0, 0, 0.20);
-    /*颜色稍微加深一点*/
-}
-
-.card-group .card:nth-child(6) {
-    background: rgba(0, 0, 0, 0.24);
-    /*颜色稍微加深一点*/
-}
-
-.glass{
-    text-align: left;
-    height: 100px;
-    width: 200px;
-    background: url(../img/waves.png);
-    background-position: top right;
-    /*background: #fff;*/
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    transition: all 2s;
-}
-
-.glass:hover{
-    height: 300px;
-    background-position: top left;
-}
+        @-webkit-keyframes myRotate-before1 /* Safari and Chrome */
+        {
+        from {transform:rotate(0deg);}
+        to {transform:rotate(300deg);}
+        }
+         @-webkit-keyframes myRotate-before2 /* Safari and Chrome */
+        {
+        from {transform:rotate(0deg);}
+        to {transform:rotate(20deg);}
+        }
+         @-webkit-keyframes myRotate-before3 /* Safari and Chrome */
+        {
+        from {transform:rotate(0deg);}
+        to {transform:rotate(60deg);}
+        }
+         @-webkit-keyframes myRotate-before4 /* Safari and Chrome */
+        {
+        from {transform:rotate(0deg);}
+        to {transform:rotate(180deg);}
+        }
+         @-webkit-keyframes myRotate-before5 /* Safari and Chrome */
+        {
+        from {transform:rotate(0deg);}
+        to {transform:rotate(270deg);}
+        }
+         @-webkit-keyframes myRotate-before6 /* Safari and Chrome */
+        {
+        from {transform:rotate(0deg);}
+        to {transform:rotate(30deg);}
+        }
+        .circle1:after{
+            animation:myRotate-after1 2s  linear forwards;
+            -webkit-animation:myRotate-after1 2s  linear forwards;
+        }
+        .circle2:after{
+            animation:myRotate-after2 2s  linear forwards;
+            -webkit-animation:myRotate-after2 2s  linear forwards;
+        }
+        .circle3:after{
+            animation:myRotate-after3 2s  linear forwards;
+            -webkit-animation:myRotate-after3 2s  linear forwards;
+        }
+        .circle4:after{
+            animation:myRotate-after4 2s  linear forwards;
+            -webkit-animation:myRotate-after4 2s  linear forwards;
+        }
+        .circle5:after{
+            animation:myRotate-after5 2s  linear forwards;
+            -webkit-animation:myRotate-after5 2s  linear forwards;
+        }
+        .circle6:after{
+animation:myRotate-after6 2s  linear forwards;
+            -webkit-animation:myRotate-after6 2s  linear forwards;
+        }
+        @-webkit-keyframes myRotate-after1  /*Safari and Chrome*/
+        {
+        0%{opacity:0;}
+        55%{opacity:0;}
+        56%{opacity:1;}
+        100%{opacity:1;}
+        }
+          @-webkit-keyframes myRotate-after2  /*Safari and Chrome*/
+        {
+        0%{opacity:0;}
+        55%{opacity:0;}
+        56%{opacity:0;}
+        100%{opacity:0;}
+        }
+          @-webkit-keyframes myRotate-after3  /*Safari and Chrome*/
+        {
+        0%{opacity:0;}
+        55%{opacity:0;}
+        56%{opacity:0;}
+        100%{opacity:0;}
+        }
+          @-webkit-keyframes myRotate-after4  /*Safari and Chrome*/
+        {
+        0%{opacity:0;}
+        55%{opacity:0;}
+        56%{opacity:0;}
+        100%{opacity:0;}
+        }
+          @-webkit-keyframes myRotate-after5  /*Safari and Chrome*/
+        {
+        0%{opacity:0;}
+        55%{opacity:0;}
+        56%{opacity:1;}
+        100%{opacity:1;}
+        }
+          @-webkit-keyframes myRotate-after6 /*Safari and Chrome*/
+        {
+        0%{opacity:0;}
+        55%{opacity:0;}
+        56%{opacity:0;}
+        100%{opacity:0;}
+        }
+        @-webkit-keyframes myRotate1  /*Safari and Chrome*/
+        {
+        0%{background:white;}
+          56%{background:white;}
+          57%{background:transparent;}
+          100%{background:transparent;}
+        }
+        @-webkit-keyframes myRotate2  /*Safari and Chrome*/
+        {
+        0%{background:white;}
+          56%{background:white;}
+          57%{background:white;}
+          100%{background:white;}
+        }
+        @-webkit-keyframes myRotate3  /*Safari and Chrome*/
+        {
+        0%{background:white;}
+          56%{background:white;}
+          57%{background:white;}
+          100%{background:white;}
+        }
+        @-webkit-keyframes myRotate4  /*Safari and Chrome*/
+        {
+        0%{background:white;}
+          56%{background:white;}
+          57%{background:white;}
+          100%{background:white;}
+        }
+        @-webkit-keyframes myRotate5  /*Safari and Chrome*/
+        {
+        0%{background:white;}
+          56%{background:white;}
+          57%{background:transparent;}
+          100%{background:transparent;}
+        }
+        @-webkit-keyframes myRotate6  /*Safari and Chrome*/
+        {
+        0%{background:white;}
+          56%{background:white;}
+          57%{background:white;}
+          100%{background:white;}
+        }
+        .percent{
+            color: #0cc;
+            font-size: 20px;
+            line-height: 100px;
+            display: block;
+            vertical-align: middle;
+            position: absolute;
+            margin-left: 30px;
+        }
 /**********************************footer******************/
 footer {
     background: #333;

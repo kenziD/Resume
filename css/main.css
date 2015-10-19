@@ -426,7 +426,7 @@ button {
             width: 100px;
             height: 200px;
             border: solid;
-            border-width:10px 0 10px 10px;
+            border-width:100px 0 100px 100px;
             border-color:#0cf;
             border-radius: 100px 0 0 100px;/*画半圆*/
             background:white;

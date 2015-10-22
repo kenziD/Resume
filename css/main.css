@@ -393,11 +393,13 @@ button {
 
 /*******************饼状图样式******************/
     .circle{
+        /***************center it***********/
         position: absolute;
         left: 50%;
         top: 50%;
-        margin-left: -100px;
-        margin-top: -100px;
+        /*margin-left: -100px;*/
+        /*margin-top: -100px;*/
+
         text-align: center;
         box-sizing:border-box;
         width: 30%;
@@ -440,7 +442,6 @@ button {
         }
         @media screen and (max-width:800px){
     .card-group .card {
-        /*padding: 10% 5%;*/
         width: 50%;
         min-height: 150px;
     }

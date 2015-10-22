@@ -2,61 +2,98 @@
     font-family: SimHei;
     box-sizing: border-box;
 }
-body,html{
-    height:100%;
+
+body,
+html {
+    height: 100%;
+    width: 100%;
 }
+
 header {
     background: url(../img/bg2.jpg);
     /*一定要注意是上一级目录*/
     background-size: cover;
     height: 100%;
+    width: 100%;
     /*box-shadow: 0 700px 0 0 rgba(0, 0, 0, 0.2) inset;/*实现遮罩的效果*/
-
     /*background-attachment: fixed;*/
-
     /*这样背景图片就不会动了*/
 }
-#hamburger{
-    z-index: 1;
+
+#hamburger {
+    /*position: absolute;*/
+    z-index: 3;
     position: fixed;
 }
-.nav{
-    margin:7.5px 10px;
+
+.nav {
+    margin: 7.5px 10px;
     height: 10px;
     width: 50px;
     background: #fff;
     border-radius: 5px;
-    transition:all 1s;
+    transition: all 1s;
 }
 
-#mask-nav{
+#mask-nav {
     /*display: none;*/
     position: absolute;
+    z-index: 2;
     top: 0;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
     height: 600px;
     width: 400px;
-    transform:translateX(-400px);
-    transition:transform 1s;
+    transform: translateX(-400px);
+    transition: transform 1s;
 }
-a{
+
+a {
     text-decoration: none;
 }
-a:link {color: #fff}     /* 未访问的链接 */
-a:visited {color: #fff}  /* 已访问的链接 */
-a:hover {color: #fff}    /* 鼠标移动到链接上 */
-a:active {color: #fff}   /* 选定的链接 */
+
+a:link {
+    color: #fff
+}
+
+
+/* 未访问的链接 */
+
+a:visited {
+    color: #fff
+}
+
+
+/* 已访问的链接 */
+
+a:hover {
+    color: #fff
+}
+
+
+/* 鼠标移动到链接上 */
+
+a:active {
+    color: #fff
+}
+
+
+/* 选定的链接 */
+
 #nav {
     height: 80px;
-    position: fixed;/*让导航栏一直在上面*/
+    position: fixed;
+    /*让导航栏一直在上面*/
     width: 80px;
     z-index: 1;
 }
-#nav-bar{
+
+#nav-bar {
     position: absolute;
     margin-left: 20px;
     margin-top: 20px;
 }
+
+
 /*nav ul {
     list-style: none;
     /*去掉li前面的点*/
@@ -89,9 +126,13 @@ nav ul li a {
 /*color: #fff;
 }
 */
+
+
 /***********************banner*********************/
+
 #banner {
-    min-height: 100%;
+    height: 100%;
+    width: 100%;
     /*background: transparent;*/
     background: rgba(0, 0, 0, 0.2);
     /*这句放在这里也能实现这种遮罩的效果*/
@@ -99,18 +140,18 @@ nav ul li a {
 }
 
 #banner .inner {
-    max-width: 500px;
+    max-width: 80%;
     /*设置inner的宽度*/
     margin: 0 auto;
     /*上下为0，左右为auto 使其居中*/
     text-align: center;
     position: relative;
-    top: 160px;
+    top: 20%;
     /*往下来一点*/
-    font-size: 20px;
+    font-size: 1.0em;
 }
 
-#banner .inner h1 {
+h1 {
     margin: 0;
     /*有多余的行高*/
 }
@@ -132,11 +173,17 @@ button {
 
 #banner button {
     border-radius: 5px;
-    position: relative;
-    padding: 25px 50px;
-    margin-top: 250px;
-    font-size: 28px;
-    letter-spacing: 5px;
+    position: absolute;
+    /*padding: 25px 50px;*/
+    /**************用absolute left:0 right:0 margin:atuo实现居中*/
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 10%;
+    width: 20%;
+    bottom: 10%;
+    font-size: 2em;
+    /*letter-spacing: 12px;*/
     color: #eee;
     transition: color 1s;
     /*按钮的上文字的颜色加了过度效果*/
@@ -152,8 +199,9 @@ button {
     width: 0%;
     height: 100%;
     color: #eee;
+    display: flex;
     /*another button style*/
-   /* background: url(../img/more.png) no-repeat;
+    /* background: url(../img/more.png) no-repeat;
     background-size: contain;
     background-position: center;
     opacity: 0;*/
@@ -175,107 +223,239 @@ button {
 
 #banner button span {
     position: relative;
+
+
 }
-
-
-/*.logo{*/
-
-
-/*font-size: 20px;*/
-
-
-/*font-weight: 700;*/
-
-
-/*letter-spacing: 1px;/*字符间的空格*/
-
-
-/*margin-left: 20px;*/
-
-
-/**/
-
-
-/*}*/
-
-
-/*.logo a{*/
-
-
-/*line-height: 50px;*/
-
-
-/*text-decoration: none;*/
-
-
-/*color: #fff;*/
-
-
-/*}*/
-
 
 
 /***************************RECOMMEND**********************/
+
 #recommend {
-    min-height: 100%;
+    position: relative;
+    font-size: 1.0em;
+    height: 100%;
+    width: 100%;
     text-align: center;
     background-color: #171D25;
     color: #fff;
-    padding: 100px 0;
+    box-sizing:border-box;
+    /*padding: 1% 0;*/
+    border: solid 1px;
+    /*避免子元素的margin-top塌陷*/
 }
 
 .wrapper {
-    max-width: 1080px;
-    margin: 0 auto;
+    width: 80%;
+    margin: 5% auto;
 }
 
 #recommend .hr {
     width: 100%;
-    margin: 20px auto;
+    margin: 1% auto;
     height: 2px;
     background: rgb(47, 147, 79);
 }
 
 .icon-group {
-    padding: 50px 50px 0 50px;
+    position: relative;
+    box-sizing:border-box;
+    width: 80%;
+ top: 10%;
+    margin: auto;
 }
 
 .icon-group .icon {
+    box-sizing:border-box;
     display: inline-block;
-    height: 180px;
-    width: 180px;
-    margin: 0 80px;
+    max-height: 15%;
+    max-width: 15%;
+    margin: 0 7%;
     border-radius: 50%;
-    transition:transform .5s,opacity .5s;
+    transition: transform .5s, opacity .5s;
 }
 
 .icon1 {
     opacity: 0;
-    background: url(../img/github2.png);
-    background-size: cover;
     transform: translateX(250px);
+}
 
-}
 .icon2 {
-    background: url(../img/logo.png);
-    background-size: cover;
+    opacity: 1;
 }
+
 .icon3 {
     opacity: 0;
-    background: url(../img/twitter.png);
-    background-size: cover;
     transform: translateX(-250px);
 }
-.icon-name{
-    opacity: 0;
-    font-size: 30px;
-    display: inline-block;
-    margin:10px 130px;
+/*.icon-text{
+    box-sizing:border-box;
+    width: 80%;
+    margin: 5% auto;
+    font-size: 0;
+}*/
+.icon-name {
+    position: absolute;
+    opacity: 1;
+    font-size: 20px;
+    margin-left: -18%;
+    margin-top: 18%;
     transition:opacity .8s;
 }
 
+@media all and (max-width: 800px) {
+    #banner button {
+        font-size: 1em;
+    }
+
+    /* styles for iPhone/Android portrait */
+    .wrapper {
+    width: 80%;
+    margin: 15% auto;
+}
+    .icon-group {
+        height: 50%;
+        width:50%;
+        float: left;
+        top:-5%;
+    }
+    .icon-group .icon {
+        max-height: 30%;
+        max-width: 30%;
+        display: block;
+        margin:15% auto;
+        transition:opacity 1s;
+    }
+
+    .icon-name{
+        margin:auto;
+        margin-left: 70%;
+        margin-top: -40%;
+        /*margin: 15% auto;*/
+        /*height: 33.3%;*/
+        width: auto;
+         transition:opacity 1s;
+    }
+    .icon1 {
+    opacity: 0;
+    }
+
+    .icon2 {
+    opacity: 0;
+    }
+
+    .icon3 {
+    opacity: 0;
+    }
+}
+
+
+/***********************************SKILL************************/
+
+/***********************************SKILL************************/
+#skill {
+    background: white;
+    color: #000;
+    min-height: 100%;
+    padding: 2% 10%;
+}
+
+.heading {
+    max-width: 1080px;
+    margin: 20px auto;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.card-group {
+    font-size: 0px;
+     z-index: -2;
+}
+
+.card-group .card {
+    padding: 5% 0;
+    min-height: 200px;
+    color:#0cf;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    /*要不然盒子会乱*/
+    display: inline-block;
+    width: 33%;
+    font-size: 20px;
+    text-align: center;
+    /*padding: 20px;*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /*简直太棒了！ http://www.cnblogs.com/wangfupeng1988/p/4287292.html*/
+}
+
+
+/*******************饼状图样式******************/
+    .circle{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -100px;
+        margin-top: -100px;
+        text-align: center;
+        box-sizing:border-box;
+        width: 30%;
+        /*height: wi;*/
+        border: double;
+        border-width:20px 0 20px 20px;
+        background:white;
+        /*border-radius: 100px 0 0 100px;/*画半圆*/*/
+        }
+        .mask{
+        border-color:#DCDCDC;
+        z-index: 0;
+        }
+        .left1,.left2,.left3,.left4,.left5,.left6{
+        z-index: -1;
+        border-color:#0cf;
+        transform:rotate(0deg);
+        transform-origin:100px 100px;
+        }
+        .right{
+        z-index: -2;
+        border-color:#DCDCDC;
+        transform:rotate(180deg);
+        transform-origin:100px 100px;
+        }
+        .percent{
+        color: #0cc;
+        font-size: 15px;
+        line-height: 100px;
+        display: block;
+        vertical-align: middle;
+        position: absolute;
+        margin-left: 30px;
+        }
+        .language{
+            font-size: 1em;
+            position: relative;
+            z-index: 2;
+            line-height: 200px;
+        }
+        @media screen and (max-width:800px){
+    .card-group .card {
+        /*padding: 10% 5%;*/
+        width: 50%;
+        min-height: 150px;
+    }
+        .language{
+            line-height: 1em;
+             position: absolute;
+            top: 0;
+             left: 0;
+            right: 0;
+            margin:auto;
+        }
+}
 
 /*********************************pro-show*******************/
+
 .show-preview .img-section {
     width: 45%;
 }
@@ -334,286 +514,8 @@ button {
 }
 
 
-/***********************************SKILL************************/
-#skill {
-    background: #fff;
-    color: #000;
-    padding: 100px 200px;
-}
-
-.heading {
-    max-width: 1080px;
-    margin: 20px auto;
-    text-align: center;
-    letter-spacing: 1px;
-}
-
-.heading .hr {
-    width: inherit;
-    height: 2px;
-    background: #fff;
-    margin: 20px auto;
-}
-
-.card-group {
-    font-size: 0px;
-     z-index: -2;
-}
-
-.card-group .card {
-    line-height: 300px;
-    z-index: 1;
-    position: relative;
-    overflow: hidden;
-    /*要不然盒子会乱*/
-    display: inline-block;
-    width: 50%;
-    min-height: 300px;
-    font-size: 20px;
-    text-align: center;
-    padding: 20px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    /*简直太棒了！ http://www.cnblogs.com/wangfupeng1988/p/4287292.html*/
-}
-
-
-
-.circle{
-
-            box-sizing:border-box;
-            width: 100px;
-            height: 200px;
-            background:white;
-            position: absolute;
-            top: 50%;
-            margin-top: -100px;
-            left: 50%;
-            margin-left: -100px;
-        }
-        .circle1{
-            animation:myRotate1 2s  linear forwards;
-            -webkit-animation:myRotate1 2s  linear forwards;
-        }
-        .circle2{
-            animation:myRotate2 2s  linear forwards;
-            -webkit-animation:myRotate2 2s  linear forwards;
-        }
-        .circle3{
-            animation:myRotate3 2s  linear forwards;
-            -webkit-animation:myRotate3 2s  linear forwards;
-        }
-        .circle4{
-            animation:myRotate4 2s  linear forwards;
-            -webkit-animation:myRotate4 2s  linear forwards;
-        }
-        .circle5{
-            animation:myRotate5 2s  linear forwards;
-            -webkit-animation:myRotate5 2s  linear forwards;
-        }
-        .circle6{
-            animation:myRotate6 2s  linear forwards;
-            -webkit-animation:myRotate6 2s  linear forwards;
-        }
-        .circle:before,.circle:after{
-            box-sizing:border-box;
-            content: "";
-            position: absolute;
-            z-index: -1;
-            top: 0;
-            left: 0;
-            width: 100px;
-            height: 200px;
-            border: solid;
-            border-width:100px 0 100px 100px;
-            border-color:#0cf;
-            border-radius: 100px 0 0 100px;/*画半圆*/
-            background:white;
-        }
-        .circle:before{
-            transform:rotate(0deg);
-            transform-origin:100px 100px;
-            /*transition:transform 1s;*/
-        }
-        .circle:after{
-            transform:rotate(180deg);
-            transform-origin:100px 100px;
-            opacity: 0;
-        }
-        .circle1:before{
-            animation:myRotate-before1 2s  linear forwards;
-            -webkit-animation:myRotate-before1 2s  linear forwards;
-        }
-        .circle2:before{
-            animation:myRotate-before2 2s  linear forwards;
-            -webkit-animation:myRotate-before2 2s  linear forwards;
-        }
-        .circle3:before{
-            animation:myRotate-before3 2s  linear forwards;
-            -webkit-animation:myRotate-before3 2s  linear forwards;
-        }
-        .circle4:before{
-            animation:myRotate-before4 2s  linear forwards;
-            -webkit-animation:myRotate-before4 2s  linear forwards;
-        }
-        .circle5:before{
-            animation:myRotate-before5 2s  linear forwards;
-            -webkit-animation:myRotate-before5 2s  linear forwards;
-        }
-        .circle6:before{
-animation:myRotate-before6 2s  linear forwards;
-            -webkit-animation:myRotate-before6 2s  linear forwards;
-        }
-
-        @-webkit-keyframes myRotate-before1 /* Safari and Chrome */
-        {
-        from {transform:rotate(0deg);}
-        to {transform:rotate(300deg);}
-        }
-         @-webkit-keyframes myRotate-before2 /* Safari and Chrome */
-        {
-        from {transform:rotate(0deg);}
-        to {transform:rotate(20deg);}
-        }
-         @-webkit-keyframes myRotate-before3 /* Safari and Chrome */
-        {
-        from {transform:rotate(0deg);}
-        to {transform:rotate(60deg);}
-        }
-         @-webkit-keyframes myRotate-before4 /* Safari and Chrome */
-        {
-        from {transform:rotate(0deg);}
-        to {transform:rotate(180deg);}
-        }
-         @-webkit-keyframes myRotate-before5 /* Safari and Chrome */
-        {
-        from {transform:rotate(0deg);}
-        to {transform:rotate(270deg);}
-        }
-         @-webkit-keyframes myRotate-before6 /* Safari and Chrome */
-        {
-        from {transform:rotate(0deg);}
-        to {transform:rotate(30deg);}
-        }
-        .circle1:after{
-            animation:myRotate-after1 2s  linear forwards;
-            -webkit-animation:myRotate-after1 2s  linear forwards;
-        }
-        .circle2:after{
-            animation:myRotate-after2 2s  linear forwards;
-            -webkit-animation:myRotate-after2 2s  linear forwards;
-        }
-        .circle3:after{
-            animation:myRotate-after3 2s  linear forwards;
-            -webkit-animation:myRotate-after3 2s  linear forwards;
-        }
-        .circle4:after{
-            animation:myRotate-after4 2s  linear forwards;
-            -webkit-animation:myRotate-after4 2s  linear forwards;
-        }
-        .circle5:after{
-            animation:myRotate-after5 2s  linear forwards;
-            -webkit-animation:myRotate-after5 2s  linear forwards;
-        }
-        .circle6:after{
-animation:myRotate-after6 2s  linear forwards;
-            -webkit-animation:myRotate-after6 2s  linear forwards;
-        }
-        @-webkit-keyframes myRotate-after1  /*Safari and Chrome*/
-        {
-        0%{opacity:0;}
-        55%{opacity:0;}
-        56%{opacity:1;}
-        100%{opacity:1;}
-        }
-          @-webkit-keyframes myRotate-after2  /*Safari and Chrome*/
-        {
-        0%{opacity:0;}
-        55%{opacity:0;}
-        56%{opacity:0;}
-        100%{opacity:0;}
-        }
-          @-webkit-keyframes myRotate-after3  /*Safari and Chrome*/
-        {
-        0%{opacity:0;}
-        55%{opacity:0;}
-        56%{opacity:0;}
-        100%{opacity:0;}
-        }
-          @-webkit-keyframes myRotate-after4  /*Safari and Chrome*/
-        {
-        0%{opacity:0;}
-        55%{opacity:0;}
-        56%{opacity:0;}
-        100%{opacity:0;}
-        }
-          @-webkit-keyframes myRotate-after5  /*Safari and Chrome*/
-        {
-        0%{opacity:0;}
-        55%{opacity:0;}
-        56%{opacity:1;}
-        100%{opacity:1;}
-        }
-          @-webkit-keyframes myRotate-after6 /*Safari and Chrome*/
-        {
-        0%{opacity:0;}
-        55%{opacity:0;}
-        56%{opacity:0;}
-        100%{opacity:0;}
-        }
-        @-webkit-keyframes myRotate1  /*Safari and Chrome*/
-        {
-        0%{background:white;}
-          56%{background:white;}
-          57%{background:transparent;}
-          100%{background:transparent;}
-        }
-        @-webkit-keyframes myRotate2  /*Safari and Chrome*/
-        {
-        0%{background:white;}
-          56%{background:white;}
-          57%{background:white;}
-          100%{background:white;}
-        }
-        @-webkit-keyframes myRotate3  /*Safari and Chrome*/
-        {
-        0%{background:white;}
-          56%{background:white;}
-          57%{background:white;}
-          100%{background:white;}
-        }
-        @-webkit-keyframes myRotate4  /*Safari and Chrome*/
-        {
-        0%{background:white;}
-          56%{background:white;}
-          57%{background:white;}
-          100%{background:white;}
-        }
-        @-webkit-keyframes myRotate5  /*Safari and Chrome*/
-        {
-        0%{background:white;}
-          56%{background:white;}
-          57%{background:transparent;}
-          100%{background:transparent;}
-        }
-        @-webkit-keyframes myRotate6  /*Safari and Chrome*/
-        {
-        0%{background:white;}
-          56%{background:white;}
-          57%{background:white;}
-          100%{background:white;}
-        }
-        .percent{
-            color: #0cc;
-            font-size: 20px;
-            line-height: 100px;
-            display: block;
-            vertical-align: middle;
-            position: absolute;
-            margin-left: 30px;
-        }
 /**********************************footer******************/
+
 footer {
     background: #333;
     color: #fff;
@@ -623,7 +525,7 @@ footer {
 
 .share-group {
     display: block;
-    width: 1080px;
+    /*width: 1080px;*/
     margin: 0 auto;
     padding: 50px;
 }

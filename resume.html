@@ -4,6 +4,7 @@
 <head>
     <title>Resume|kenziD</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="normlize css/normlize.css">
     <link rel="stylesheet" type="text/css" href="font-awesome-4.4.0/css/font-awesome.css">
     <link rel="stylesheet" href="css/main.css">
@@ -13,76 +14,93 @@
     <header>
         <!--页头开始-->
         <nav id="nav">
-        <div id="hamburger">
-	        <div class="nav up"></div>
-			<div class="nav middle"></div>
-			<div class="nav down"></div>
-		</div>
-		<div id="mask-nav">
-		</div>
+            <div id="hamburger">
+                <div class="nav up"></div>
+                <div class="nav middle"></div>
+                <div class="nav down"></div>
+            </div>
+            <div id="mask-nav">
+            </div>
         </nav>
         <div id="banner">
             <div class="inner">
                 <h1>KenziD</h1>
                 <p>A Girl Who love Web Design and Programming</p>
-                <a id="more">
-                    <button><span>MORE</span></button>
-                </a>
             </div>
+            <a id="more">
+                <button><span>MORE</span></button>
+            </a>
         </div>
     </header>
     <section id="recommend">
         <div class="wrapper">
-            <h2>About me</h2>
-            <div class="hr">
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, eius labore laborum fugit quasi quo nihil voluptatum veritatis fugiat maiores placeat vero velit repudiandae magnam laboriosam et? Ad, accusantium, repudiandae.</p>
+            <h1>About me</h1>
+            <div class="hr"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, eius labore laborum fugit quasi quo nihil voluptatum </p>
         </div>
         <div class="icon-group">
-            <a href="http://github.com" target="_black"><span class="icon icon1"></span></a>
-            <a href="http://kenzid.github.io" target="_blank"><span class="icon icon2"></span></a>
-            <a href="http://twitter.com" target="_blank"><span class="icon icon3"></span></a>
+            <!--     <a href="http://github.com" target="_black"><img class="icon icon1" src="img/github2.png"></a>
+            <a href="http://kenzid.github.io" target="_blank"><img class="icon icon1" src="img/logo.png"></a>
+            <a href="http://twitter.com" target="_blank"><img class="icon icon1" src="img/twitter.png"></a> -->
+            <!--    <img class="icon icon1" src="img/github2.png"/>
+           <img class="icon icon1" src="img/logo.png"/>
+           <img class="icon icon1" src="img/twitter.png"/> -->
+            <a href="http://github.com"><img class="icon icon1" src="img/github2.png">  <span class = "icon-name">GITHUB</span></a>
+            <a href="http://kenzid.github.io"><img src="img/logo.png" class="icon icon2"> <span class = "icon-name">BLOG</span></a>
+            <a href="http://twitter.com"><img src="img/twitter.png" class="icon icon3">  <span class = "icon-name">TWITTER</span></a>
         </div>
-        <div class="icon-text">
-            <span class="icon-name name1">Github</span>
-            <span class="icon-name name2">Blog</span>
-            <span class="icon-name name3">Twitter</span>
-        </div>
+  <!--       <div class="icon-text">
+       
+        
+       
+         </div>  -->
     </section>
-
     <section id="skill">
         <div class="heading">
             <h2>技能树</h2>
-            <div class="hr"></div>
             <div class="subheading">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, magni soluta excepturi! Nihil error ex, asperiores inventore quam perspiciatis, praesentium harum! Quibusdam labore voluptatem sunt beatae tempore ratione neque a!
-                </p>
             </div>
         </div>
         <div class="card-group">
             <div class="card">
-            	<div class="circle circle1"><span class = "percent"></span></div>
+                <span class="language">C</span>
+                <div class="circle mask"></div>
+                <div class="circle left1"></div>
+                <div class="circle right"></div>
             </div>
             <div class="card">
-           		<div class="circle circle2"><span class = "percent"></span></div>
+                <span class="language">CSS</span>
+                <div class="circle mask"></div>
+                <div class="circle left2"></div>
+                <div class="circle right"></div>
             </div>
             <div class="card">
-            	<div class="circle circle3"><span class = "percent"></span></div>
+                <span class="language">HTML</span>
+                <div class="circle mask"></div>
+                <div class="circle left3"></div>
+                <div class="circle right"></div>
             </div>
             <div class="card">
-            	<div class="circle circle4"><span class = "percent"></span></div>
+                <span class="language">JavaScript</span>
+                <div class="circle mask"></div>
+                <div class="circle left4"></div>
+                <div class="circle right"></div>
             </div>
             <div class="card">
-            	<div class="circle circle5"><span class = "percent"></span></div>
+                <span class="language">Python</span>
+                <div class="circle mask"></div>
+                <div class="circle left5"></div>
+                <div class="circle right"></div>
             </div>
             <div class="card">
-            	<div class="circle circle6"><span class = "percent"></span></div>
+                <span class="language">R</span>
+                <div class="circle mask"></div>
+                <div class="circle left6"></div>
+                <div class="circle right"></div>
             </div>
         </div>
     </section>
-
-     <section id="pro-show">
+    <section id="pro-show">
         <div class="show-preview">
             <div class="img-section">
                 <img src="img/1.jpg" alt="">
@@ -125,27 +143,38 @@
 </body>
 <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript">
+/*************点击更多 按钮滑动到下一页******************/
 $("#more").click(function() {
     var $page2 = $("#recommend");
     var offset = $page2.offset();
-    console.log(offset.top);
+    // console.log(offset.top);
     $('html,body').animate({
         scrollTop: offset.top
     }, 1000);
 });
+
+/*********************三个icon的特效***********************/
 // 监听滚动条
 $(window).scroll(function() {
     // 滚动条到达第二个页面，图片显现，透明度为1，且滑动到原位置
     if (document.body.scrollTop == $("#recommend").offset().top) {
+
+        
         $(".icon").css('-webkit-transform', 'translateX(0px)');
         $(".icon").css({
             opacity: 1
         });
-        $(".icon-name").css({opacity:1});
-    } if(document.body.scrollTop==0) {
+        $(".icon-name").css({
+            opacity: 1
+        });
+    }
+    if (document.body.scrollTop == 0) {
         $(".icon1").css('-webkit-transform', 'translateX(250px)');
         $(".icon3").css('-webkit-transform', 'translateX(-250px)');
         $(".icon1").css({
+            opacity: 0
+        });
+         $(".icon2").css({
             opacity: 0
         });
         $(".icon3").css({
@@ -155,38 +184,87 @@ $(window).scroll(function() {
             opacity: 0
         });
     }
+   /********当滚动条滑到饼状图页开始执行动画******************/
+    if (document.body.scrollTop >( $("#skill").offset().top-50)&&document.body.scrollTop <( $("#skill").offset().top+50)) {
+        rotate(200, '.left1',width );
+        rotate(250, '.left2',width );
+        rotate(180, '.left3',width );
+        rotate(120, '.left4',width );
+        rotate(80, '.left5',width );
+        rotate(50, '.left6',width );
+    }
+    if(document.body.scrollTop > $("#skill").offset().top &&
+        document.body.scrollTop < $("#pro-show").offset().top){
+        $('.nav').css('background','black');
+    }
+    else $('.nav').css('background','white');
 });
-$(".fa").click(function(){
-    $(".fa-bars").fadeOut(function(){$(".fa-bars").attr('class', 'fa fa-times fa-3x').fadeIn();})
-});
-$(".fa").click(function(){
-     $(".fa-times").fadeOut(function(){$(".fa-times").attr('class', 'fa fa-bars fa-3x').fadeIn();})
-});
-$('#hamburger').click(function() {
-	$('#mask-nav').css('transform','translateX(0)');
-	$('.up').css('transform','rotate(45deg)');
-	$('.up').css('transform-origin','0 5px');
-		// body...
-		$('.down').css('transform','rotate(-45deg)');
-	$('.down').css('transform-origin','0 5px');
-	$('.middle').css('opacity','0');
-	 setTimeout(function(){
-       $('#hamburger').addClass('close');
-   }, 500);
-	});
 
-	$('body').delegate('.close',"click",function(){
-		$('#mask-nav').css('transform','translateX(-400px)');
-			$('.up').css('transform','rotate(0deg)');
-	$('.up').css('transform-origin','0 5px');
-		// body...
-		$('.down').css('transform','rotate(0deg)');
-	$('.down').css('transform-origin','0 5px');
-	$('.middle').css('opacity','1');
-	 setTimeout(function(){
-       $('#hamburger').removeClass('close');
-   }, 500);
-	});
+/**************nav导航栏小图标*************************/
+$('#hamburger').click(function() {
+    $('#mask-nav').css('transform', 'translateX(0)');
+    $('.up').css('transform', 'rotate(45deg)');
+    $('.up').css('transform-origin', '0 5px');
+    $('.down').css('transform', 'rotate(-45deg)');
+    $('.down').css('transform-origin', '0 5px');
+    $('.middle').css('opacity', '0');
+    $('.nav').css('background', 'white');
+    setTimeout(function() {
+        $('#hamburger').addClass('close');
+    }, 500);
+});
+
+$('body').delegate('.close', "click", function() {
+    $('#mask-nav').css('transform', 'translateX(-400px)');
+    $('.up').css('transform', 'rotate(0deg)');
+    $('.up').css('transform-origin', '0 5px');
+    $('.down').css('transform', 'rotate(0deg)');
+    $('.down').css('transform-origin', '0 5px');
+    $('.middle').css('opacity', '1');
+    setTimeout(function() {
+        $('#hamburger').removeClass('close');
+    }, 500);
+});
+
+/*****************饼状图动态显示********************/
+/*****************饼状图动态显示********************/
+ width = $('.circle').outerWidth();
+var height = width*2;
+$('.circle').css('height',''+height+'px');
+$('.circle').css('border-radius',''+width+'px 0 0 '+width+'px');
+ $('.circle').css('transform-origin', ''+width+'px '+width+'px');
+ $('.circle').css('margin-left',''+ 0-width+'px');
+$('.circle').css('margin-top',''+ 0-width+'px');
+
+$( window ).bind("resize", function(){
+
+   width = $('.circle').outerWidth();
+var height = width*2;
+$('.circle').css('margin-left',''+ 0-width+'px');
+$('.circle').css('margin-top',''+ 0-width+'px');
+
+$('.circle').css('height',''+height+'px');
+$('.circle').css('border-radius',''+width+'px 0 0 '+width+'px');
+ $('.circle').css('transform-origin', ''+width+'px '+width+'px');
+});
+
+function rotate(degree, object,rotate_origin) {
+    $(object).animate({
+        deg: degree
+    }, {
+        step: function(now, fx) {
+            $(this).css('-webkit-transform', 'rotate(' + now + 'deg)');
+            $(this).css('-moz-transform', 'rotate(' + now + 'deg)');
+            $(this).css('transform', 'rotate(' + now + 'deg)');
+            if (now > 179) {
+                $(object).prev().css('z-index', '-2'); /*邻近的上一个兄弟节点*/
+                $(object + '+ .right').css('border-color', '#0cf'); /*邻近的下一个兄弟节点*/
+            }
+        },
+        duration: 2000
+    }, 'linear');
+};
+console.log(window.screen.width);
 </script>
 
 </html>

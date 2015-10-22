@@ -351,12 +351,19 @@ button {
 
 /***********************************SKILL************************/
 
+<<<<<<< HEAD
 /***********************************SKILL************************/
 #skill {
     background: white;
     color: #000;
     min-height: 100%;
     padding: 2% 10%;
+=======
+#skill {
+    background: white;
+    color: #000;
+    padding: 100px 200px;
+>>>>>>> a0fb9666e2af780970bacfbe2cdf147bd5122073
 }
 
 .heading {
@@ -368,6 +375,7 @@ button {
 
 .card-group {
     font-size: 0px;
+<<<<<<< HEAD
      z-index: -2;
 }
 
@@ -375,12 +383,23 @@ button {
     padding: 5% 0;
     min-height: 200px;
     color:#0cf;
+=======
+    z-index: -2;
+}
+
+.card-group .card {
+    color: #0cf;
+>>>>>>> a0fb9666e2af780970bacfbe2cdf147bd5122073
     z-index: 1;
     position: relative;
     overflow: hidden;
     /*要不然盒子会乱*/
     display: inline-block;
     width: 33%;
+<<<<<<< HEAD
+=======
+    min-height: 300px;
+>>>>>>> a0fb9666e2af780970bacfbe2cdf147bd5122073
     font-size: 20px;
     text-align: center;
     /*padding: 20px;*/
@@ -388,6 +407,69 @@ button {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     /*简直太棒了！ http://www.cnblogs.com/wangfupeng1988/p/4287292.html*/
+<<<<<<< HEAD
+=======
+}
+
+
+/*******************饼状图样式******************/
+
+.circle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -100px;
+    margin-top: -100px;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100px;
+    height: 200px;
+    border: double;
+    border-width: 20px 0 20px 20px;
+    background: white;
+    border-radius: 100px 0 0 100px;
+    /*画半圆*/
+}
+
+.mask {
+    border-color: #DCDCDC;
+    z-index: 0;
+}
+
+.left1,
+.left2,
+.left3,
+.left4,
+.left5,
+.left6 {
+    z-index: -1;
+    border-color: #0cf;
+    transform: rotate(0deg);
+    transform-origin: 100px 100px;
+}
+
+.right {
+    z-index: -2;
+    border-color: #DCDCDC;
+    transform: rotate(180deg);
+    transform-origin: 100px 100px;
+}
+
+.percent {
+    color: #0cc;
+    font-size: 20px;
+    line-height: 100px;
+    display: block;
+    vertical-align: middle;
+    position: absolute;
+    margin-left: 30px;
+}
+
+.language {
+    position: relative;
+    z-index: 2;
+    line-height: 300px;
+>>>>>>> a0fb9666e2af780970bacfbe2cdf147bd5122073
 }
 
 

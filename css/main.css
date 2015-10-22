@@ -260,7 +260,7 @@ button {
     position: relative;
     box-sizing:border-box;
     width: 80%;
-    top: 10%;
+ top: 10%;
     margin: auto;
 }
 
@@ -316,7 +316,7 @@ button {
         height: 50%;
         width:50%;
         float: left;
-        top:auto;
+        top:-5%;
     }
     .icon-group .icon {
         max-height: 30%;

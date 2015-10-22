@@ -4,6 +4,7 @@
 <head>
     <title>Resume|kenziD</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="normlize css/normlize.css">
     <link rel="stylesheet" type="text/css" href="font-awesome-4.4.0/css/font-awesome.css">
     <link rel="stylesheet" href="css/main.css">
@@ -25,29 +26,34 @@
             <div class="inner">
                 <h1>KenziD</h1>
                 <p>A Girl Who love Web Design and Programming</p>
-                <a id="more">
-                    <button><span>MORE</span></button>
-                </a>
             </div>
+            <a id="more">
+                <button><span>MORE</span></button>
+            </a>
         </div>
     </header>
     <section id="recommend">
         <div class="wrapper">
-            <h2>About me</h2>
-            <div class="hr">
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, eius labore laborum fugit quasi quo nihil voluptatum veritatis fugiat maiores placeat vero velit repudiandae magnam laboriosam et? Ad, accusantium, repudiandae.</p>
+            <h1>About me</h1>
+            <div class="hr"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, eius labore laborum fugit quasi quo nihil voluptatum </p>
         </div>
         <div class="icon-group">
-            <a href="http://github.com" target="_black"><span class="icon icon1"></span></a>
-            <a href="http://kenzid.github.io" target="_blank"><span class="icon icon2"></span></a>
-            <a href="http://twitter.com" target="_blank"><span class="icon icon3"></span></a>
+            <!--     <a href="http://github.com" target="_black"><img class="icon icon1" src="img/github2.png"></a>
+            <a href="http://kenzid.github.io" target="_blank"><img class="icon icon1" src="img/logo.png"></a>
+            <a href="http://twitter.com" target="_blank"><img class="icon icon1" src="img/twitter.png"></a> -->
+            <!--    <img class="icon icon1" src="img/github2.png"/>
+           <img class="icon icon1" src="img/logo.png"/>
+           <img class="icon icon1" src="img/twitter.png"/> -->
+            <a href="http://github.com"><img class="icon icon1" src="img/github2.png">  <span class = "icon-name">GITHUB</span></a>
+            <a href="http://kenzid.github.io"><img src="img/logo.png" class="icon icon2"> <span class = "icon-name">BLOG</span></a>
+            <a href="http://twitter.com"><img src="img/twitter.png" class="icon icon3">  <span class = "icon-name">TWITTER</span></a>
         </div>
-        <div class="icon-text">
-            <span class="icon-name name1">Github</span>
-            <span class="icon-name name2">Blog</span>
-            <span class="icon-name name3">Twitter</span>
-        </div>
+  <!--       <div class="icon-text">
+       
+        
+       
+         </div>  -->
     </section>
     <section id="skill">
         <div class="heading">
@@ -152,6 +158,8 @@ $("#more").click(function() {
 $(window).scroll(function() {
     // 滚动条到达第二个页面，图片显现，透明度为1，且滑动到原位置
     if (document.body.scrollTop == $("#recommend").offset().top) {
+
+    	
         $(".icon").css('-webkit-transform', 'translateX(0px)');
         $(".icon").css({
             opacity: 1
@@ -166,6 +174,9 @@ $(window).scroll(function() {
         $(".icon1").css({
             opacity: 0
         });
+         $(".icon2").css({
+            opacity: 0
+        });
         $(".icon3").css({
             opacity: 0
         });
@@ -174,19 +185,18 @@ $(window).scroll(function() {
         });
     }
     /********当滚动条滑到饼状图页开始执行动画******************/
-    if (document.body.scrollTop >( $("#skill").offset().top-50)&&document.body.scrollTop <( $("#skill").offset().top+50)) {
-    	rotate(200, '.left1');
-		rotate(250, '.left2');
-		rotate(180, '.left3');
-		rotate(120, '.left4');
-		rotate(80, '.left5');
-		rotate(50, '.left6');
+    if (document.body.scrollTop > ($("#skill").offset().top - 50) && document.body.scrollTop < ($("#skill").offset().top + 50)) {
+        rotate(200, '.left1');
+        rotate(250, '.left2');
+        rotate(180, '.left3');
+        rotate(120, '.left4');
+        rotate(80, '.left5');
+        rotate(50, '.left6');
     }
-    if(document.body.scrollTop > $("#skill").offset().top &&
-    	document.body.scrollTop < $("#pro-show").offset().top){
-    	$('.nav').css('background','black');
-    }
-    else $('.nav').css('background','white');
+    if (document.body.scrollTop > $("#skill").offset().top &&
+        document.body.scrollTop < $("#pro-show").offset().top) {
+        $('.nav').css('background', 'black');
+    } else $('.nav').css('background', 'white');
 });
 
 /**************nav导航栏小图标*************************/
@@ -197,7 +207,7 @@ $('#hamburger').click(function() {
     $('.down').css('transform', 'rotate(-45deg)');
     $('.down').css('transform-origin', '0 5px');
     $('.middle').css('opacity', '0');
-    $('.nav').css('background','white');
+    $('.nav').css('background', 'white');
     setTimeout(function() {
         $('#hamburger').addClass('close');
     }, 500);
@@ -233,7 +243,7 @@ function rotate(degree, object) {
         duration: 2000
     }, 'linear');
 };
-
+console.log(window.screen.width);
 </script>
 
 </html>

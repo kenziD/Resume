@@ -232,7 +232,7 @@ button {
 
 #recommend {
     position: relative;
-    font-size: 1.0em;
+    font-size: 12px;
     height: 100%;
     width: 100%;
     text-align: center;
@@ -260,7 +260,6 @@ button {
     position: relative;
     box-sizing:border-box;
     width: 80%;
- top: 10%;
     margin: auto;
 }
 

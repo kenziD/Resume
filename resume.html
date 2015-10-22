@@ -223,7 +223,7 @@ $('body').delegate('.close', "click", function() {
 });
 
 /*****************饼状图动态显示********************/
- width = $('.circle').outerWidth();
+width = $('.circle').outerWidth();
 var height = width*2;
 $('.circle').css('height',''+height+'px');
 $('.circle').css('border-radius',''+width+'px 0 0 '+width+'px');
@@ -231,18 +231,16 @@ $('.circle').css('border-radius',''+width+'px 0 0 '+width+'px');
  $('.circle').css('margin-left',''+ 0-width+'px');
 $('.circle').css('margin-top',''+ 0-width+'px');
 
-// $( window ).bind("resize", function(){
+$(window).resize(function() {
+width = $('.circle').outerWidth();
+var height = width*2;
+$('.circle').css('height',''+height+'px');
+$('.circle').css('border-radius',''+width+'px 0 0 '+width+'px');
+ $('.circle').css('transform-origin', ''+height/2+'px '+width+'px');
+ $('.circle').css('margin-left',''+ 0-width+'px');
+$('.circle').css('margin-top',''+ 0-width+'px');
 
-//    width = $('.circle').outerWidth();
-// var height = width*2;
-// $('.circle').css('margin-left',''+ 0-width+'px');
-// $('.circle').css('margin-top',''+ 0-width+'px');
-
-// $('.circle').css('height',''+height+'px');
-// $('.circle').css('border-radius',''+width+'px 0 0 '+width+'px');
-//  $('.circle').css('transform-origin', ''+width+'px '+width+'px');
-// });
-
+});
 function rotate(degree, object,rotate_origin) {
     $(object).animate({
         deg: degree

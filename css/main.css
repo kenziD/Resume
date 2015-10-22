@@ -302,7 +302,7 @@ button {
     transition:opacity .8s;
 }
 
-@media all and (max-width: 800px) {
+@media all and (orientation:portrait){
     #banner button {
         font-size: 1em;
     }
@@ -380,7 +380,7 @@ button {
     /*要不然盒子会乱*/
     display: inline-block;
     width: 33%;
-    min-height: 50%;
+    min-height: 50%;/*感觉这句没什么乱用**/
     font-size: 20px;
     text-align: center;
     /*padding: 20px;*/
@@ -417,30 +417,22 @@ button {
         z-index: -1;
         border-color:#0cf;
         transform:rotate(0deg);
-        transform-origin:100px 100px;
+        /*transform-origin:100px 100px;*/
         }
         .right{
         z-index: -2;
         border-color:#DCDCDC;
         transform:rotate(180deg);
-        transform-origin:100px 100px;
+        /*transform-origin:100px 100px;*/
         }
-        .percent{
-        color: #0cc;
-        font-size: 15px;
-        line-height: 100px;
-        display: block;
-        vertical-align: middle;
-        position: absolute;
-        margin-left: 30px;
-        }
+
         .language{
             font-size: 1em;
             position: relative;
             z-index: 2;
             line-height: 200px;
         }
-        @media screen and (max-width:800px){
+        @media screen  and (orientation:portrait){
     .card-group .card {
         width: 50%;
     height: 230px;

@@ -148,7 +148,7 @@ nav ul li a {
     position: relative;
     top: 20%;
     /*往下来一点*/
-    font-size: 1.0em;
+    font-size: 15px;
 }
 
 h1 {
@@ -182,7 +182,7 @@ button {
     height: 10%;
     width: 20%;
     bottom: 10%;
-    font-size: 2em;
+    font-size: 16px;
     /*letter-spacing: 12px;*/
     color: #eee;
     transition: color 1s;

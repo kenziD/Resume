@@ -246,7 +246,7 @@ button {
 
 .wrapper {
     width: 80%;
-    margin:15% auto 5% auto
+    margin:10% auto 5% auto
 }
 
 #recommend .hr {
@@ -276,7 +276,7 @@ button {
 
 .icon1 {
     opacity: 0;
-    transform: translateX(250px);
+    transform: translateX(200px);
 }
 
 .icon2 {
@@ -285,7 +285,7 @@ button {
 
 .icon3 {
     opacity: 0;
-    transform: translateX(-250px);
+    transform: translateX(-200px);
 }
 /*.icon-text{
     box-sizing:border-box;
@@ -310,7 +310,7 @@ button {
     /* styles for iPhone/Android portrait */
     .wrapper {
     width: 80%;
-    margin: 15% auto;
+    margin: 20% auto;
 }
     .icon-group {
         height: 50%;

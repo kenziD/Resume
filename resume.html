@@ -45,11 +45,10 @@
             <!--    <img class="icon icon1" src="img/github2.png"/>
            <img class="icon icon1" src="img/logo.png"/>
            <img class="icon icon1" src="img/twitter.png"/> -->
-            <a href="http://github.com"><img class="icon icon1" src="img/github2.png">  <span class = "icon-name">GITHUB</span></a>
-            <a href="http://kenzid.github.io"><img src="img/logo.png" class="icon icon2"> <span class = "icon-name">BLOG</span></a>
-            <a href="http://twitter.com"><img src="img/twitter.png" class="icon icon3">  <span class = "icon-name">TWITTER</span></a>
+            <a href="http://github.com"><img class="icon icon1" src="img/github2.png"> <span class="icon-name">GITHUB</span></a>
+            <a href="http://kenzid.github.io"><img src="img/logo.png" class="icon icon2"> <span class="icon-name">BLOG</span></a>
+            <a href="http://twitter.com"><img src="img/twitter.png" class="icon icon3"> <span class="icon-name">TWITTER</span></a>
         </div>
-
     </section>
     <section id="skill">
         <div class="heading">
@@ -155,7 +154,7 @@ $(window).scroll(function() {
     // 滚动条到达第二个页面，图片显现，透明度为1，且滑动到原位置
     if (document.body.scrollTop == $("#recommend").offset().top) {
 
-        
+
         $(".icon").css('-webkit-transform', 'translateX(0px)');
         $(".icon").css({
             opacity: 1
@@ -170,7 +169,7 @@ $(window).scroll(function() {
         $(".icon1").css({
             opacity: 0
         });
-         $(".icon2").css({
+        $(".icon2").css({
             opacity: 0
         });
         $(".icon3").css({
@@ -180,20 +179,32 @@ $(window).scroll(function() {
             opacity: 0
         });
     }
-   /********当滚动条滑到饼状图页开始执行动画******************/
-    if (document.body.scrollTop >( $("#skill").offset().top-50)&&document.body.scrollTop <( $("#skill").offset().top+50)) {
-        rotate(200, '.left1',width );
-        rotate(250, '.left2',width );
-        rotate(180, '.left3',width );
-        rotate(120, '.left4',width );
-        rotate(80, '.left5',width );
-        rotate(50, '.left6',width );
+    /********当滚动条滑到饼状图页开始执行动画******************/
+    if (document.body.scrollTop > ($("#skill").offset().top - 50) && document.body.scrollTop < ($("#skill").offset().top + 50)) {
+        /*************如果是手机端,静态展示************/
+        if(window.screen.width<767){
+             static_show_piechart(200, '.left1');
+        static_show_piechart(250, '.left2');
+        static_show_piechart(180, '.left3');
+        static_show_piechart(120, '.left4');
+        static_show_piechart(80, '.left5');
+        static_show_piechart(50, '.left6');
+        }
+        /*************如果是web端或者ipad,动态展示********/
+        else{
+             rotate(200, '.left1', width);
+        rotate(250, '.left2', width);
+        rotate(180, '.left3', width);
+        rotate(120, '.left4', width);
+        rotate(80, '.left5', width);
+        rotate(50, '.left6', width);
+        }
+
     }
-    if(document.body.scrollTop > $("#skill").offset().top &&
-        document.body.scrollTop < $("#pro-show").offset().top){
-        $('.nav').css('background','black');
-    }
-    else $('.nav').css('background','white');
+    if (document.body.scrollTop > $("#skill").offset().top &&
+        document.body.scrollTop < $("#pro-show").offset().top) {
+        $('.nav').css('background', 'black');
+    } else $('.nav').css('background', 'white');
 });
 
 /**************nav导航栏小图标*************************/
@@ -222,26 +233,33 @@ $('body').delegate('.close', "click", function() {
     }, 500);
 });
 
-/*****************饼状图动态显示********************/
+/*****************根据屏幕视窗设置圆的宽度（宽为.card的30%）从而动态设置高度，边框曲率，位置使其居中********************/
 width = $('.circle').outerWidth();
-var height = width*2;
-$('.circle').css('height',''+height+'px');
-$('.circle').css('border-radius',''+width+'px 0 0 '+width+'px');
- $('.circle').css('transform-origin', ''+height/2+'px '+width+'px');
- $('.circle').css('margin-left',''+ 0-width+'px');
-$('.circle').css('margin-top',''+ 0-width+'px');
+var height = width * 2;
+console.log(width,height);
+$('.circle').css('height', '' + height + 'px');
+$('.circle').css('border-radius', '' + width + 'px 0 0 ' + width + 'px');
+$('.circle').css('transform-origin', '' + width + 'px ' + width + 'px');
+$('.circle').css('margin-left', '' + 0 - width + 'px');
+$('.circle').css('margin-top', '' + 0 - width + 'px');
+console.log($('.card').height());
 
+$('.card').css('line-height', '' + $('.card').height() + 'px');/***文字始终垂直居中*/
+
+/*********防止害怕横屏竖屏旋转***********/
 $(window).resize(function() {
-width = $('.circle').outerWidth();
-var height = width*2;
-$('.circle').css('height',''+height+'px');
-$('.circle').css('border-radius',''+width+'px 0 0 '+width+'px');
- $('.circle').css('transform-origin', ''+height/2+'px '+width+'px');
- $('.circle').css('margin-left',''+ 0-width+'px');
-$('.circle').css('margin-top',''+ 0-width+'px');
+    width = $('.circle').outerWidth();
+    var height = width * 2;
+    $('.circle').css('height', '' + height + 'px');
+    $('.circle').css('border-radius', '' + width + 'px 0 0 ' + width + 'px');
+    $('.circle').css('transform-origin', '' + height / 2 + 'px ' + width + 'px');
+    $('.circle').css('margin-left', '' + 0 - width + 'px');
+    $('.circle').css('margin-top', '' + 0 - width + 'px');
+$('.card').css('line-height', '' + $('.card').height() + 'px');
 
 });
-function rotate(degree, object,rotate_origin) {
+/**************动态展示饼状图**************/
+function rotate(degree, object, rotate_origin) {
     $(object).animate({
         deg: degree
     }, {
@@ -257,7 +275,19 @@ function rotate(degree, object,rotate_origin) {
         duration: 2000
     }, 'linear');
 };
-console.log(window.screen.width);
+/***************静态展示饼状图************/
+function static_show_piechart(degree, object) {
+            $(object).css('-webkit-transform', 'rotate(' + degree + 'deg)');
+            $(object).css('-moz-transform', 'rotate(' + degree + 'deg)');
+            $(object).css('transform', 'rotate(' + degree + 'deg)');
+            if (degree > 179) {
+                $(object).prev().css('z-index', '-2'); /*邻近的上一个兄弟节点*/
+                $(object + '+ .right').css('border-color', '#0cf'); /*邻近的下一个兄弟节点*/
+            }
+};
+console.log(window.orientation);
+
+  console.log(window.screen.width);
 </script>
 
 </html>

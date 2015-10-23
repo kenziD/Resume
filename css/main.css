@@ -240,13 +240,13 @@ button {
     color: #fff;
     box-sizing:border-box;
     /*padding: 1% 0;*/
-    border: solid 1px;
+    border: solid 1px #171D25;
     /*避免子元素的margin-top塌陷*/
 }
 
 .wrapper {
     width: 80%;
-    margin: 5% auto;
+    margin:15% auto 5% auto
 }
 
 #recommend .hr {
@@ -261,6 +261,7 @@ button {
     box-sizing:border-box;
     width: 80%;
     margin: auto;
+    top: 5%;
 }
 
 .icon-group .icon {
@@ -294,7 +295,7 @@ button {
 }*/
 .icon-name {
     position: absolute;
-    opacity: 1;
+    opacity: 0;
     font-size: 20px;
     margin-left: -18%;
     margin-top: 18%;
@@ -332,7 +333,7 @@ button {
         /*margin: 15% auto;*/
         /*height: 33.3%;*/
         width: auto;
-         transition:opacity 1s;
+        transition:opacity 1s;
     }
     .icon1 {
     opacity: 0;
@@ -354,18 +355,22 @@ button {
 #skill {
     background: white;
     color: #000;
-    min-height: 100%;
+    /*min-height: 100%;*/
+    height: 100%;
+    /*min-height: 100%;*/
     padding: 2% 10%;
+    width: 100%;
 }
 
 .heading {
-    max-width: 1080px;
+    min-width: 100%;
     margin: 20px auto;
     text-align: center;
     letter-spacing: 1px;
 }
 
 .card-group {
+    height: 100%;
     font-size: 0px;
      z-index: -2;
 }
@@ -379,7 +384,8 @@ button {
     /*要不然盒子会乱*/
     display: inline-block;
     width: 33%;
-    min-height: 50%;/*感觉这句没什么乱用**/
+    height: 40%;
+    /*min-height: 50%;感觉这句没什么乱用 因为父级元素都没有设置height啊,笨**/
     font-size: 20px;
     text-align: center;
     /*padding: 20px;*/
@@ -402,9 +408,8 @@ button {
         text-align: center;
         box-sizing:border-box;
         width: 30%;
-        /*height: wi;*/
         border: double;
-        border-width:20px 0 20px 20px;
+        border-width:10px 0 10px 10px;
         background:white;
         /*border-radius: 100px 0 0 100px;/*画半圆*/*/
         }
@@ -429,12 +434,15 @@ button {
             font-size: 1em;
             position: relative;
             z-index: 2;
-            line-height: 200px;
+            /*line-height: 200px;*/
         }
         @media screen  and (orientation:portrait){
+            .circle{
+            width: 30%;
+        }
     .card-group .card {
         width: 50%;
-    height: 230px;
+        height: 30%;
     }
         .language{
             line-height: 1em;

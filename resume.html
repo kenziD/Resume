@@ -36,15 +36,9 @@
         <div class="wrapper">
             <h1>About me</h1>
             <div class="hr"></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, eius labore laborum fugit quasi quo nihil voluptatum </p>
+            <p>苦逼研二狗，目前方向和嵌入式有关，通俗讲是四旋翼项目，对前端有很高的兴趣。喜爱编程，喜欢运动。 </p>
         </div>
         <div class="icon-group">
-            <!--     <a href="http://github.com" target="_black"><img class="icon icon1" src="img/github2.png"></a>
-            <a href="http://kenzid.github.io" target="_blank"><img class="icon icon1" src="img/logo.png"></a>
-            <a href="http://twitter.com" target="_blank"><img class="icon icon1" src="img/twitter.png"></a> -->
-            <!--    <img class="icon icon1" src="img/github2.png"/>
-           <img class="icon icon1" src="img/logo.png"/>
-           <img class="icon icon1" src="img/twitter.png"/> -->
             <a href="http://github.com"><img class="icon icon1" src="img/github2.png"> <span class="icon-name">GITHUB</span></a>
             <a href="http://kenzid.github.io"><img src="img/logo.png" class="icon icon2"> <span class="icon-name">BLOG</span></a>
             <a href="http://twitter.com"><img src="img/twitter.png" class="icon icon3"> <span class="icon-name">TWITTER</span></a>
@@ -138,6 +132,8 @@
 </body>
 <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript">
+$("#hamburger").css('height',$("#hamburger").outerWidth());
+console.log($("#hamburger").outerWidth());
 /*************点击更多 按钮滑动到下一页******************/
 $("#more").click(function() {
     var $page2 = $("#recommend");
@@ -164,8 +160,8 @@ $(window).scroll(function() {
         });
     }
     if (document.body.scrollTop == 0) {
-        $(".icon1").css('-webkit-transform', 'translateX(50%)');
-        $(".icon3").css('-webkit-transform', 'translateX(-50%)');
+        $(".icon1").css('-webkit-transform', 'translateX(200px)');
+        $(".icon3").css('-webkit-transform', 'translateX(-200px)');
         $(".icon1").css({
             opacity: 0
         });
@@ -222,7 +218,7 @@ $('#hamburger').click(function() {
 });
 
 $('body').delegate('.close', "click", function() {
-    $('#mask-nav').css('transform', 'translateX(-400px)');
+    $('#mask-nav').css('transform', 'translateX(-100%)');
     $('.up').css('transform', 'rotate(0deg)');
     $('.up').css('transform-origin', '0 5px');
     $('.down').css('transform', 'rotate(0deg)');
@@ -236,13 +232,11 @@ $('body').delegate('.close', "click", function() {
 /*****************根据屏幕视窗设置圆的宽度（宽为.card的30%）从而动态设置高度，边框曲率，位置使其居中********************/
 width = $('.circle').outerWidth();
 var height = width * 2;
-console.log(width,height);
 $('.circle').css('height', '' + height + 'px');
 $('.circle').css('border-radius', '' + width + 'px 0 0 ' + width + 'px');
 $('.circle').css('transform-origin', '' + width + 'px ' + width + 'px');
 $('.circle').css('margin-left', '' + 0 - width + 'px');
 $('.circle').css('margin-top', '' + 0 - width + 'px');
-console.log($('.card').height());
 
 $('.card').css('line-height', '' + $('.card').height() + 'px');/***文字始终垂直居中*/
 
@@ -285,9 +279,7 @@ function static_show_piechart(degree, object) {
                 $(object + '+ .right').css('border-color', '#0cf'); /*邻近的下一个兄弟节点*/
             }
 };
-console.log(window.orientation);
 
-  console.log(window.screen.width);
 </script>
 
 </html>

@@ -342,9 +342,7 @@ button {
 }
 
 @media all and (orientation:portrait) {
-    #banner button {
-        font-size: 1em;
-    }
+  
     /* styles for iPhone/Android portrait */
     .wrapper {
         width: 80%;
@@ -511,7 +509,6 @@ button {
 .show-preview >div {
     /*还可以这样写！使文字和图片并列*/
    display: inline-block;
-    
 }
 
 .show-preview {
@@ -521,7 +518,7 @@ button {
 }
 
 .show-preview:nth-child(odd) {
-    background: #333;
+    background: #282828;
     /*只要是奇数 背景颜色就这个*/
 }
 .show-preview .img-section {
@@ -530,7 +527,6 @@ button {
 
 .img-section img {
     max-width: 80%;
-
 
 }
 
@@ -549,14 +545,26 @@ button {
 .text-section h2 {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .text-section p {
     line-height: 30px;
-    font-size: 16px;
+    font-size: 12px;
 }
+@media screen and (max-width: 767px){
+    .show-preview {
 
+    display: block;
+}
+.show-preview .img-section {
+    width: 100%;
+}
+.text-section {
+    padding: 20px;
+    width: 80%;
+}
+}
 
 /**********************************footer******************/
 

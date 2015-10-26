@@ -54,6 +54,16 @@ a:active {
 }
 /* 选定的链接 */
 
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(../img/Preloader_3.gif) center no-repeat #fff;
+}
+
 
 header {
     background: url(../img/bg2.jpg);
@@ -65,7 +75,24 @@ header {
     /*background-attachment: fixed;*/
     /*这样背景图片就不会动了*/
 }
+.video {
+  position: absolute;
+  z-index: 0;
+  top: 50%; left: 50%;
+   transform: translate(-50%, -50%);
+    min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
+.video2{
+    position: relative;
+  z-index: 1;
+  /*top: 50%; left: 50%;*/
+   /*transform: translate(-50%, -50%);*/
+    width: 100%;
 
+}
 #nav {
     height: 50px;
     width: 100%;
@@ -81,7 +108,7 @@ header {
 }
 
 nav ul {
-    opacity: 1;
+    display: block;
     color: #000;
     list-style: none;
     /*去掉li前面的点*/
@@ -125,19 +152,29 @@ ul a:link,ul a:visited,ul a:hover,a:active
 .nav {
     /*position: relative;*/
     /*margin: 7.5px 10px;*/
-    height: 10%;
+   /* height: 10%;
     width: 80%;
-    margin-top: 20%;
+    margin-top: 20%;*/
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
+    height:3px;
+    width: 30px;
     background:#104E8B;
-    margin-right: auto;
-    margin-left: auto;
-    -webkit-transition:all .4s;
-    -o-transition:all .4s;
-    transition:all .4s;
-   
+    -webkit-transition:all .3s;
+    -o-transition:all .3s;
+    transition:all .3s;
 }
 
-
+.up{
+    top: -20px;
+}
+.down{
+    top: 20px;
+}
 /***************************遮罩*************************/
 #mask-nav {
     position: fixed;
@@ -217,8 +254,11 @@ button {
     left: 0;
     right: 0;
     margin: auto;
-    height: 10%;
+ /*   height: 10%;
     width: 20%;
+    bottom: 10%;*/
+    height:50px;
+    width: 100px;
     bottom: 10%;
     font-size: 16px;
     /*letter-spacing: 12px;*/
@@ -512,6 +552,7 @@ button {
 }
 
 .show-preview {
+    position: relative;
     text-align: center;
     font-size: 0px;
     display: flex;
@@ -522,14 +563,24 @@ button {
     /*只要是奇数 背景颜色就这个*/
 }
 .show-preview .img-section {
+    position: relative;
     width: 45%;
+    overflow: hidden;
 }
 
 .img-section img {
+
     max-width: 100%;
+   transform:scale(1.0,1.0);
+   -webkit-transition: all .4s;
+   -o-transition: all .4s;
+   transition: all .4s; 
 
 }
+.img-section:hover img{
+    transform:scale(1.2,1.2);
 
+}
 .text-section {
     margin: auto;
     width: 55%;

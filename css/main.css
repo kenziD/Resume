@@ -1,5 +1,9 @@
+/***********font-family**************/
+
 * {
-    font-family: SimHei;
+    font-family: "Helvetica Neue", Helvetica,Tahoma，Arial，'Hiragino Sans GB'，'WenQuanYi Micro Hei'，'Microsoft Yahei'，sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
 /*********full-page***********/
@@ -26,7 +30,29 @@ html {
     box-sizing: inherit;
 }
 
-/***********font-family**************/
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: #fff;
+}
+/* 未访问的链接 */
+
+a:visited {
+    color: #fff;
+}
+/* 已访问的链接 */
+
+a:hover {
+    color: #fff;
+}
+/* 鼠标移动到链接上 */
+
+a:active {
+    color: #fff;
+}
+/* 选定的链接 */
 
 
 header {
@@ -39,18 +65,41 @@ header {
     /*background-attachment: fixed;*/
     /*这样背景图片就不会动了*/
 }
+
 #nav {
-    height: 100%;
-    width: 30%;
+    height: 10%;
+    width: 100%;
     position: fixed;
     /*让导航栏一直在上面*/
     z-index: 1;
+    background-color: #fff;
+    -webkit-transition: width .4s;
+    -o-transition: width .4s;
+    transition: width .4s;
 }
 
+nav ul {
+    color: #000;
+    list-style: none;
+    /*去掉li前面的点*/
+    margin: 0 auto;
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+ul a:link,ul a:visited,ul a:hover,a:active
+{
+    color:#000;
+}
 #hamburger {
     z-index: 3;
     position: fixed;
     width: 5%;
+    opacity: 1;
     /*height: =width*/
     /*use js to let height==width*/
 }
@@ -66,8 +115,9 @@ header {
     /*margin: 7.5px 10px;*/
     height: 10%;
     width: 80%;
+    background-color: black;
     margin-top: 20%;
-    background: #fff;
+    background: red;
     border-radius: 10%;
     transition: all 1s;
 }
@@ -83,62 +133,14 @@ header {
     transition: transform 1s;
 }
 
-a {
-    text-decoration: none;
-}
-
-a:link {
-    color: #fff
-}
-
-
-/* 未访问的链接 */
-
-a:visited {
-    color: #fff
-}
-
-
-/* 已访问的链接 */
-
-a:hover {
-    color: #fff
-}
-
-
-/* 鼠标移动到链接上 */
-
-a:active {
-    color: #fff
-}
-
-
-/* 选定的链接 */
 
 
 
-
-/*nav ul {
-    list-style: none;
-    /*去掉li前面的点*/
-
-
-/* margin: 0;
-    float: right;
-
-}
-
-nav ul li ,nav .logo{
-    display: inline-block;
-    line-height: 80px;
-    margin-right: 20px;
-}
-
-nav ul li a {
+/*nav ul li a {
     line-height: 50px;
-    text-decoration: none;
+    text-decoration: none;*/
 
-    display: inline-block;/*不仅仅只有这个字可以点击 其附近的空白处都可以点击*/
+    /*display: inline-block;不仅仅只有这个字可以点击 其附近的空白处都可以点击*/
 
 
 /* height: inherit;/*要是我原来估计只能写成button 或者 div*/
@@ -164,7 +166,6 @@ nav ul li a {
 }
 
 #banner .inner {
-    max-width: 80%;
     /*设置inner的宽度*/
     margin: 0 auto;
     /*上下为0，左右为auto 使其居中*/
@@ -172,17 +173,16 @@ nav ul li a {
     position: relative;
     top: 20%;
     /*往下来一点*/
-    font-size: 15px;
 }
 
-h1 {
-    margin: 0;
+#banner .inner h1 {
+    margin: 0 auto;
     /*有多余的行高*/
 }
 
 #banner .inner p {
     line-height: 20px;
-    margin: 10px;
+    margin: 10px  auto;
 }
 
 button {

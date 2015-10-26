@@ -14,6 +14,11 @@
     <header>
         <!--页头开始-->
         <nav id="nav">
+            <ul>
+                <a href="#"><li>首页</li></a>
+                <a href="#"><li>项目</li></a>
+                <a href="#"><li>联系我</li></a>
+            </ul>
             <div id="hamburger">
                 <div class="nav up"></div>
                 <div class="nav middle"></div>
@@ -132,6 +137,8 @@
 </body>
 <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript">
+
+$('li').css('line-height',''+$('#nav').height()+'px');
 $("#hamburger").css('height',$("#hamburger").outerWidth());
 console.log($("#hamburger").outerWidth());
 /*************点击更多 按钮滑动到下一页******************/
@@ -147,6 +154,12 @@ $("#more").click(function() {
 /*********************三个icon的特效***********************/
 // 监听滚动条
 $(window).scroll(function() {
+    if (document.body.scrollTop == $(".inner").offset().top) {
+        $('#nav').css('width','0');
+        $('ul').css('display','none');
+        $('#hamburger'.css('opacity','1'));
+
+    }
     // 滚动条到达第二个页面，图片显现，透明度为1，且滑动到原位置
     if (document.body.scrollTop == $("#recommend").offset().top) {
 
@@ -199,8 +212,8 @@ $(window).scroll(function() {
     }
     if (document.body.scrollTop > $("#skill").offset().top &&
         document.body.scrollTop < $("#pro-show").offset().top) {
-        $('.nav').css('background', 'black');
-    } else $('.nav').css('background', 'white');
+        $('.nav').css('background', 'red');
+    } else $('.nav').css('background', 'red');
 });
 
 /**************nav导航栏小图标*************************/
@@ -211,7 +224,7 @@ $('#hamburger').click(function() {
     $('.down').css('transform', 'rotate(-45deg)');
     $('.down').css('transform-origin', '0 5px');
     $('.middle').css('opacity', '0');
-    $('.nav').css('background', 'white');
+    $('.nav').css('background', 'red');
     setTimeout(function() {
         $('#hamburger').addClass('close');
     }, 500);

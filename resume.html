@@ -11,12 +11,22 @@
 </head>
 
 <body>
+ <div id="mask-nav">
+        <ul>
+            <a href="#"><li><h1>首页</h1></li></a>
+            <a href="#recommend"><li><h1>项目</h1></li></a>
+            <a href="#"><li><h1>联系我</h1></li></a>
+        </ul>
+</div>
+
     <header>
         <!--页头开始-->
+
         <nav id="nav">
             <ul>
+            	<li class="logo"><h1>KenziD</h1></li>
                 <a href="#"><li>首页</li></a>
-                <a href="#"><li>项目</li></a>
+                <a href="#recommend"><li>项目</li></a>
                 <a href="#"><li>联系我</li></a>
             </ul>
             <div id="hamburger">
@@ -24,9 +34,9 @@
                 <div class="nav middle"></div>
                 <div class="nav down"></div>
             </div>
-            <div id="mask-nav">
-            </div>
+
         </nav>
+           
         <div id="banner">
             <div class="inner">
                 <h1>KenziD</h1>
@@ -97,7 +107,7 @@
     <section id="pro-show">
         <div class="show-preview">
             <div class="img-section">
-                <img src="img/1.jpg" alt="">
+                <img src="img/project.jpg" alt="">
             </div>
             <div class="text-section">
                 <h2>标题2</h2>
@@ -110,12 +120,12 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perferendis consequuntur praesentium quisquam voluptas vero earum nihil repellendus consequatur numquam? Nihil optio expedita, consequuntur officia repellat, ipsa et molestiae maxime.</p>
             </div>
             <div class="img-section">
-                <img src="img/2.jpg" alt="">
+                <img src="img/micro.jpg" alt="">
             </div>
         </div>
-        <div class="show-preview">
+         <div class="show-preview">
             <div class="img-section">
-                <img src="img/3.jpg" alt="">
+                <img src="img/control.jpg" alt="">
             </div>
             <div class="text-section">
                 <h2>标题2</h2>
@@ -138,9 +148,60 @@
 <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript">
 
-$('li').css('line-height',''+$('#nav').height()+'px');
-$("#hamburger").css('height',$("#hamburger").outerWidth());
-console.log($("#hamburger").outerWidth());
+$('li').css('line-height',''+$('#nav').height()+'px');/*保证垂直居中*/
+
+
+/**************nav导航栏小图标 动画效果*************************/
+
+var nav_icon ={
+	navicon_to_remove :function(){
+		$('.nav').css('position','absolute');
+	    $('.nav').css('left','0');
+	    $('.nav').css('right','0');
+	    $('.nav').css('top','0');
+	    $('.nav').css('bottom','0');
+	    $('.nav').css('margin','auto');
+	  
+	    $('.up').css('transform', 'rotate(135deg)');
+	    $('.down').css('transform', 'rotate(-135deg)');
+	    $('.middle').css('opacity', '0');
+	    $('.nav').css('background', '#104E8B');
+	},
+	remove_to_navicon :function(){
+	 	$('.up').css('transform', 'rotate(0deg)');
+	    $('.down').css('transform', 'rotate(0deg)');
+	    $('.nav').css('left','');
+	    $('.nav').css('right','');
+	    $('.nav').css('top','');
+	    $('.nav').css('bottom','');
+	    $('.nav').css('margin','');
+	    $('.nav').css('position','');
+
+	    $('.middle').css('opacity', '1');
+	}
+};
+
+$('#hamburger').click(function() {
+    $('#mask-nav').css('display', 'flex');
+    nav_icon.navicon_to_remove();
+    setTimeout(function() {
+        $('#hamburger').addClass('close');
+    }, 500);
+});
+
+$('body').delegate('.close', "click", function() {
+    $('#mask-nav').css('display', 'none');
+
+    nav_icon.remove_to_navicon();
+    setTimeout(function() {
+        $('#hamburger').removeClass('close');
+    }, 500);
+});
+
+$('#mask-nav li').click(function(){
+	$('#mask-nav').css('display', 'none');
+	nav_icon.remove_to_navicon();
+})
 /*************点击更多 按钮滑动到下一页******************/
 $("#more").click(function() {
     var $page2 = $("#recommend");
@@ -151,19 +212,30 @@ $("#more").click(function() {
     }, 1000);
 });
 
-/*********************三个icon的特效***********************/
+
 // 监听滚动条
 $(window).scroll(function() {
-    if (document.body.scrollTop == $(".inner").offset().top) {
-        $('#nav').css('width','0');
-        $('ul').css('display','none');
-        $('#hamburger'.css('opacity','1'));
+
+/****************nav bar动态收缩效果************************/
+    if (document.body.scrollTop >=100) {
+        $('#nav').css('width',''+$('#nav').height()+'px');
+        $('nav ul').css('opacity','0');
+        $("#nav").css('margin-top','20px');
+        $("#nav").css('margin-left','20px');
+        $('#hamburger').css('opacity','1');
 
     }
+     if (document.body.scrollTop ==0) {
+        $('#nav').css('width','100%');
+        $('nav ul').css('opacity','1');
+        $("#nav").css('margin-top','0');
+        $("#nav").css('margin-left','0');
+        $('#hamburger').css('opacity','0');
+
+    }
+    /*********************三个icon的特效***********************/
     // 滚动条到达第二个页面，图片显现，透明度为1，且滑动到原位置
     if (document.body.scrollTop == $("#recommend").offset().top) {
-
-
         $(".icon").css('-webkit-transform', 'translateX(0px)');
         $(".icon").css({
             opacity: 1
@@ -172,75 +244,31 @@ $(window).scroll(function() {
             opacity: 1
         });
     }
-    if (document.body.scrollTop == 0) {
-        $(".icon1").css('-webkit-transform', 'translateX(200px)');
-        $(".icon3").css('-webkit-transform', 'translateX(-200px)');
-        $(".icon1").css({
-            opacity: 0
-        });
-        $(".icon2").css({
-            opacity: 0
-        });
-        $(".icon3").css({
-            opacity: 0
-        });
-        $(".icon-name").css({
-            opacity: 0
-        });
-    }
+
     /********当滚动条滑到饼状图页开始执行动画******************/
     if (document.body.scrollTop > ($("#skill").offset().top - 50) && document.body.scrollTop < ($("#skill").offset().top + 50)) {
         /*************如果是手机端,静态展示************/
         if(window.screen.width<767){
-             static_show_piechart(200, '.left1');
-        static_show_piechart(250, '.left2');
-        static_show_piechart(180, '.left3');
-        static_show_piechart(120, '.left4');
-        static_show_piechart(80, '.left5');
-        static_show_piechart(50, '.left6');
+			static_show_piechart(200, '.left1');
+			static_show_piechart(250, '.left2');
+			static_show_piechart(180, '.left3');
+			static_show_piechart(120, '.left4');
+			static_show_piechart(80, '.left5');
+			static_show_piechart(50, '.left6');
         }
         /*************如果是web端或者ipad,动态展示********/
         else{
-             rotate(200, '.left1', width);
-        rotate(250, '.left2', width);
-        rotate(180, '.left3', width);
-        rotate(120, '.left4', width);
-        rotate(80, '.left5', width);
-        rotate(50, '.left6', width);
+	        rotate(200, '.left1', width);
+	        rotate(250, '.left2', width);
+	        rotate(180, '.left3', width);
+	        rotate(120, '.left4', width);
+	        rotate(80, '.left5', width);
+	        rotate(50, '.left6', width);
         }
-
     }
-    if (document.body.scrollTop > $("#skill").offset().top &&
-        document.body.scrollTop < $("#pro-show").offset().top) {
-        $('.nav').css('background', 'red');
-    } else $('.nav').css('background', 'red');
 });
 
-/**************nav导航栏小图标*************************/
-$('#hamburger').click(function() {
-    $('#mask-nav').css('transform', 'translateX(0)');
-    $('.up').css('transform', 'rotate(45deg)');
-    $('.up').css('transform-origin', '0 5px');
-    $('.down').css('transform', 'rotate(-45deg)');
-    $('.down').css('transform-origin', '0 5px');
-    $('.middle').css('opacity', '0');
-    $('.nav').css('background', 'red');
-    setTimeout(function() {
-        $('#hamburger').addClass('close');
-    }, 500);
-});
 
-$('body').delegate('.close', "click", function() {
-    $('#mask-nav').css('transform', 'translateX(-100%)');
-    $('.up').css('transform', 'rotate(0deg)');
-    $('.up').css('transform-origin', '0 5px');
-    $('.down').css('transform', 'rotate(0deg)');
-    $('.down').css('transform-origin', '0 5px');
-    $('.middle').css('opacity', '1');
-    setTimeout(function() {
-        $('#hamburger').removeClass('close');
-    }, 500);
-});
 
 /*****************根据屏幕视窗设置圆的宽度（宽为.card的30%）从而动态设置高度，边框曲率，位置使其居中********************/
 width = $('.circle').outerWidth();

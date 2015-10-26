@@ -130,11 +130,7 @@
     <section id="pro-show">
         <div class="show-preview">
             <div class="img-section">
-                <!-- <img src="img/project.jpg" alt=""> -->
-	<video  id="my-video" class="video2" autoplay muted loop>
-  <source src="http://callmenick.com/_development/video/full-screen-background-video/media/demo.mp4" type="video/mp4">
-  Your browser doesn't support HTML5 video. Here's a <a href="#">link</a> to download the video.
-</video>
+                <img src="img/project.jpg" alt="">
             </div>
             <div class="text-section">
                 <h2>标题2</h2>
@@ -161,18 +157,20 @@
         </div>
     </section>
     <footer>
-        <ul class="share-group">
-            <li>item</li>
-            <li>item</li>
-            <li>item</li>
-            <li>item</li>
-        </ul>
+        <div class="share-group">
+            <a href="http://github.com"><i class="logo fa fa-github-alt"></i></a>
+            <a href="http://weibo.com/"><i class="logo fa fa-weibo"></i></a>
+            <a href="http://twitter.com"><i class="logo fa fa-twitter"></i></a>
+            <a ><i class="logo fa fa-weixin"></i></a>
+        </div>
         <div class="copy">
             &copy kenziD
         </div>
     </footer>
 </body>
 <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script src="dist/sweetalert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
     <script type="text/javascript">
     // Wait for window load
 	$(window).load(function() {
@@ -180,7 +178,6 @@
 		setTimeout(function(){
 			$(".se-pre-con").fadeOut("slow");;
 		});
-		
 	});
 	</script>
 <script type="text/javascript">
@@ -191,15 +188,11 @@ $('li').css('line-height', '' + $('#nav').height() + 'px'); /*保证垂直居中
 
 var nav_icon = {
     navicon_to_remove: function() {
-    	
         $('.up').css('top', '0 ');
-       
 setTimeout(function() {
         $('.up').css('transform', 'rotate3d(0,0,1,45deg) ');
           }, 200);
-        
         $('.down').css('top', '0 ');
-       
  setTimeout(function() {
         $('.down').css('transform', 'rotate3d(0,0,1,-45deg) ');
          }, 200);
@@ -364,6 +357,11 @@ function static_show_piechart(degree, object) {
         $(object + '+ .right').css('border-color', '#0cf'); /*邻近的下一个兄弟节点*/
     }
 };
+
+/********click weixin******/
+$('.fa-weixin').click(function(){
+  sweetAlert("haha...", "我才不告诉你微信呢")
+});
 </script>
 
 </html>

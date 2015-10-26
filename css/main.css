@@ -12,8 +12,10 @@ html {
     height: 100%;
     width: 100%;
 }
-
-
+/****响应式?***/
+html{
+    -webkit-text-size-adjust: 100%
+}
 /****************html的盒模型是border-box,其余的继承，这样的好处是，如果想要设置成content-box，后面的也可以继承*/
 
 html {
@@ -85,13 +87,10 @@ header {
   width: auto;
   height: auto;
 }
-.video2{
-    position: relative;
-  z-index: 1;
-  /*top: 50%; left: 50%;*/
-   /*transform: translate(-50%, -50%);*/
-    width: 100%;
-
+@media all and (max-width: 765px) {
+.video{
+    display: none;
+}
 }
 #nav {
     height: 50px;
@@ -146,9 +145,7 @@ ul a:link,ul a:visited,ul a:hover,a:active
     /*height: =width*/
     /*use js to let height==width*/
 }
-@media all and (orientation:portrait) {
-    
-}
+
 .nav {
     /*position: relative;*/
     /*margin: 7.5px 10px;*/
@@ -382,7 +379,7 @@ button {
 }
 
 @media all and (orientation:portrait) {
-  
+
     /* styles for iPhone/Android portrait */
     .wrapper {
         width: 80%;
@@ -627,15 +624,16 @@ footer {
 }
 
 .share-group {
-    display: block;
-    /*width: 1080px;*/
     margin: 0 auto;
     padding: 50px;
+    display: table;
+    text-align: center;
 }
 
-.share-group li {
-    display: inline-block;
+.share-group i {
+    display: table-cell;
     padding: 10px;
+    margin: auto;
 }
 
 .copy {

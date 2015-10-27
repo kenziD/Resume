@@ -46,29 +46,21 @@ a {
 a:link {
     color: #fff;
 }
-
-
 /* 未访问的链接 */
 
 a:visited {
     color: #fff;
 }
-
-
 /* 已访问的链接 */
 
 a:hover {
     color: #fff;
 }
-
-
 /* 鼠标移动到链接上 */
 
 a:active {
     color: #fff;
 }
-
-
 /* 选定的链接 */
 
 
@@ -84,6 +76,7 @@ a:active {
     background: url(../img/Preloader_3.gif) center no-repeat #fff;
 }
 
+/*********************nav*********************/
 header {
     background: url(../img/bg2.jpg);
     /*一定要注意是上一级目录*/
@@ -194,7 +187,7 @@ a:active {
 }
 
 
-/***************************遮罩*************************/
+/***************************mask*************************/
 
 #mask-nav {
     position: fixed;
@@ -319,7 +312,7 @@ button {
 }
 
 
-/***************************RECOMMEND**********************/
+/***************************recommend**********************/
 
 #recommend {
     position: relative;
@@ -424,7 +417,7 @@ button {
 }
 
 
-/***********************************SKILL************************/
+/***********************************skill************************/
 
 #skill {
     background: #000;
@@ -638,13 +631,15 @@ footer {
     display: table-cell;
     padding: 10px;
     margin: auto;
-    -webkit-transition:transform .4s;
-    -o-transition:transform .4s;
-    transition:transform .4s;
+    -webkit-transition: transform .4s;
+    -o-transition: transform .4s;
+    transition: transform .4s;
 }
+
 .share-group i:hover {
-transform:scale(1.2,1.2);
+    transform: scale(1.2, 1.2);
 }
+
 .copy {
     padding-bottom: 20px;
 }

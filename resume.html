@@ -181,8 +181,6 @@
 	});
 	</script>
 <script type="text/javascript">
-$('li').css('line-height', '' + $('#nav').height() + 'px'); /*保证垂直居中*/
-
 
 /**************nav导航栏小图标 动画效果*************************/
 
@@ -341,7 +339,7 @@ function rotate(degree, object, rotate_origin) {
             $(this).css('transform', 'rotate(' + now + 'deg)');
             if (now > 179) {
                 $(object).prev().css('z-index', '-2'); /*邻近的上一个兄弟节点*/
-                $(object + '+ .right').css('border-color', '#0cf'); /*邻近的下一个兄弟节点*/
+                $(object + '+ .right').css('border-color', '#14bfff'); /*邻近的下一个兄弟节点*/
             }
         },
         duration: 2000
@@ -354,7 +352,7 @@ function static_show_piechart(degree, object) {
     $(object).css('transform', 'rotate(' + degree + 'deg)');
     if (degree > 179) {
         $(object).prev().css('z-index', '-2'); /*邻近的上一个兄弟节点*/
-        $(object + '+ .right').css('border-color', '#0cf'); /*邻近的下一个兄弟节点*/
+        $(object + '+ .right').css('border-color', '#14bfff'); /*邻近的下一个兄弟节点*/
     }
 };
 

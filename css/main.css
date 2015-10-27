@@ -1,21 +1,28 @@
 /***********font-family**************/
 
 * {
-    font-family: "Helvetica Neue", Helvetica,Tahoma，Arial，'Hiragino Sans GB'，'WenQuanYi Micro Hei'，'Microsoft Yahei'，sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Tahoma，Arial，'Hiragino Sans GB'，'WenQuanYi Micro Hei'，'Microsoft Yahei'，sans-serif;
     padding: 0;
     margin: 0;
 }
 
+
 /*********full-page***********/
+
 body,
 html {
     height: 100%;
     width: 100%;
 }
+
+
 /****响应式?***/
-html{
+
+html {
     -webkit-text-size-adjust: 100%
 }
+
+
 /****************html的盒模型是border-box,其余的继承，这样的好处是，如果想要设置成content-box，后面的也可以继承*/
 
 html {
@@ -37,24 +44,35 @@ a {
 }
 
 a:link {
-    color:#fff;
+    color: #fff;
 }
+
+
 /* 未访问的链接 */
 
 a:visited {
-    color:#fff;
+    color: #fff;
 }
+
+
 /* 已访问的链接 */
 
 a:hover {
-    color:#fff;
+    color: #fff;
 }
+
+
 /* 鼠标移动到链接上 */
 
 a:active {
-    color:#fff;
+    color: #fff;
 }
+
+
 /* 选定的链接 */
+
+
+/*******loading page******/
 
 .se-pre-con {
     position: fixed;
@@ -66,32 +84,34 @@ a:active {
     background: url(../img/Preloader_3.gif) center no-repeat #fff;
 }
 
-
 header {
     background: url(../img/bg2.jpg);
     /*一定要注意是上一级目录*/
     background-size: cover;
     height: 100%;
     width: 100%;
-    /*box-shadow: 0 700px 0 0 rgba(0, 0, 0, 0.2) inset;/*实现遮罩的效果*/
     /*background-attachment: fixed;*/
     /*这样背景图片就不会动了*/
 }
+
 .video {
-  position: absolute;
-  z-index: 0;
-  top: 50%; left: 50%;
-   transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
+    min-height: 100%;
+    width: auto;
+    height: auto;
 }
+
 @media all and (max-width: 765px) {
-.video{
-    display: none;
+    .video {
+        display: none;
+    }
 }
-}
+
 #nav {
     height: 50px;
     width: 100%;
@@ -104,6 +124,7 @@ header {
     -o-transition: all 1s;
     transition: all 1s;
     text-align: right;
+    line-height: 50px;
 }
 
 nav ul {
@@ -118,20 +139,25 @@ nav ul {
 }
 
 nav ul li {
-     /*float: right;*/
     display: inline-block;
     margin-right: 20px;
 }
-.logo{
+
+.logo {
     float: left;
 }
-.logo h1{
+
+.logo h1 {
     margin: 0 20px;
 }
-ul a:link,ul a:visited,ul a:hover,a:active
-{
-    color:#000;
+
+ul a:link,
+ul a:visited,
+ul a:hover,
+a:active {
+    color: #000;
 }
+
 #hamburger {
     z-index: 3;
     width: 50px;
@@ -142,72 +168,74 @@ ul a:link,ul a:visited,ul a:hover,a:active
     left: 0;
     margin: auto;
     transition: all 1s;
-    /*height: =width*/
-    /*use js to let height==width*/
 }
 
 .nav {
-    /*position: relative;*/
-    /*margin: 7.5px 10px;*/
-   /* height: 10%;
-    width: 80%;
-    margin-top: 20%;*/
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    margin:auto;
-    height:3px;
+    margin: auto;
+    height: 3px;
     width: 30px;
-    background:#104E8B;
-    -webkit-transition:all .3s;
-    -o-transition:all .3s;
-    transition:all .3s;
+    background: #104E8B;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
 }
 
-.up{
+.up {
     top: -20px;
 }
-.down{
+
+.down {
     top: 20px;
 }
+
+
 /***************************遮罩*************************/
+
 #mask-nav {
     position: fixed;
     display: none;
-    top: 0;left: 0;right: 0;bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 2;
     background: rgba(0, 0, 0, 0.8);
-    transition:all 1s;
+    transition: all 1s;
     color: #fff;
-
 }
 
 #mask-nav ul {
-    /*position: absolute;*/
     width: 100%;
-    color:#fff;
+    color: #fff;
     list-style: none;
     /*去掉li前面的点*/
     margin: auto;
-    text-align: center;/*文字水平居中*/
-    }
-#mask-nav ul li{
+    text-align: center;
+    /*文字水平居中*/
+}
+
+#mask-nav ul li {
     color: white;
     width: 100%;
     margin-top: 3%;
 }
-#mask-nav ul li:hover{
-     background:white;
-     color: black;
+
+#mask-nav ul li:hover {
+    background: white;
+    color: black;
 }
+
+
 /***********************banner*********************/
 
 #banner {
     height: 100%;
     width: 100%;
-    /*background: transparent;*/
     background: rgba(0, 0, 0, 0.2);
     /*这句放在这里也能实现这种遮罩的效果*/
     color: #fff;
@@ -230,7 +258,7 @@ ul a:link,ul a:visited,ul a:hover,a:active
 
 #banner .inner p {
     line-height: 20px;
-    margin: 10px  auto;
+    margin: 10px auto;
 }
 
 button {
@@ -246,19 +274,14 @@ button {
 #banner button {
     border-radius: 5px;
     position: absolute;
-    /*padding: 25px 50px;*/
     /**************用absolute left:0 right:0 margin:atuo实现居中*/
     left: 0;
     right: 0;
     margin: auto;
- /*   height: 10%;
-    width: 20%;
-    bottom: 10%;*/
-    height:50px;
+    height: 50px;
     width: 100px;
     bottom: 10%;
     font-size: 16px;
-    /*letter-spacing: 12px;*/
     color: #eee;
     transition: color 1s;
     /*按钮的上文字的颜色加了过度效果*/
@@ -275,11 +298,6 @@ button {
     height: 100%;
     color: #eee;
     display: flex;
-    /*another button style*/
-    /* background: url(../img/more.png) no-repeat;
-    background-size: contain;
-    background-position: center;
-    opacity: 0;*/
     transition: width .4s ease;
 }
 
@@ -311,8 +329,6 @@ button {
     text-align: center;
     background-color: #171D25;
     color: #fff;
-    /*box-sizing: border-box;*/
-    /*padding: 1% 0;*/
     border: solid 1px #171D25;
     /*避免子元素的margin-top塌陷*/
 }
@@ -331,14 +347,12 @@ button {
 
 .icon-group {
     position: relative;
-    /*box-sizing: border-box;*/
     width: 80%;
     margin: auto;
     top: 5%;
 }
 
 .icon-group .icon {
-    /*box-sizing: border-box;*/
     display: inline-block;
     max-height: 15%;
     max-width: 15%;
@@ -361,14 +375,6 @@ button {
     transform: translateX(-200px);
 }
 
-
-/*.icon-text{
-    box-sizing:border-box;
-    width: 80%;
-    margin: 5% auto;
-    font-size: 0;
-}*/
-
 .icon-name {
     position: absolute;
     opacity: 0;
@@ -379,7 +385,6 @@ button {
 }
 
 @media all and (orientation:portrait) {
-
     /* styles for iPhone/Android portrait */
     .wrapper {
         width: 80%;
@@ -421,15 +426,15 @@ button {
 
 /***********************************SKILL************************/
 
-
 #skill {
-    background: white;
+    background: #000;
     color: #000;
     /*min-height: 100%;*/
     height: 100%;
     /*min-height: 100%;*/
     padding: 2% 10%;
     width: 100%;
+    color: white;
 }
 
 .heading {
@@ -478,15 +483,14 @@ button {
     text-align: center;
     box-sizing: border-box;
     width: 30%;
-    border: double;
-    border-width: 10px 0 10px 10px;
-    background: white;
+    border: solid;
+    border-width: 30px 0 30px 30px;
+    background: #000;
     /*border-radius: 100px 0 0 100px;/*画半圆*/
-    */
 }
 
 .mask {
-    border-color: #DCDCDC;
+    border-color: #00688B;
     z-index: 0;
 }
 
@@ -497,14 +501,14 @@ button {
 .left5,
 .left6 {
     z-index: -1;
-    border-color: #0cf;
+    border-color: #14bfff;
     transform: rotate(0deg);
     /*transform-origin:100px 100px;*/
 }
 
 .right {
     z-index: -2;
-    border-color: #DCDCDC;
+    border-color: #00688B;
     transform: rotate(180deg);
     /*transform-origin:100px 100px;*/
 }
@@ -537,7 +541,6 @@ button {
 
 /*********************************pro-show*******************/
 
-
 #pro-show {
     background: #2F2828;
     color: #fff;
@@ -545,7 +548,7 @@ button {
 
 .show-preview >div {
     /*还可以这样写！使文字和图片并列*/
-   display: inline-block;
+    display: inline-block;
 }
 
 .show-preview {
@@ -559,6 +562,7 @@ button {
     background: #282828;
     /*只要是奇数 背景颜色就这个*/
 }
+
 .show-preview .img-section {
     position: relative;
     width: 45%;
@@ -566,18 +570,17 @@ button {
 }
 
 .img-section img {
-
     max-width: 100%;
-   transform:scale(1.0,1.0);
-   -webkit-transition: all .4s;
-   -o-transition: all .4s;
-   transition: all .4s; 
-
+    transform: scale(1.0, 1.0);
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
 }
-.img-section:hover img{
-    transform:scale(1.2,1.2);
 
+.img-section:hover img {
+    transform: scale(1.2, 1.2);
 }
+
 .text-section {
     margin: auto;
     width: 55%;
@@ -600,19 +603,20 @@ button {
     line-height: 30px;
     font-size: 12px;
 }
-@media screen and (max-width: 767px){
-    .show-preview {
 
-    display: block;
+@media screen and (max-width: 767px) {
+    .show-preview {
+        display: block;
+    }
+    .show-preview .img-section {
+        width: 100%;
+    }
+    .text-section {
+        padding: 20px;
+        width: 80%;
+    }
 }
-.show-preview .img-section {
-    width: 100%;
-}
-.text-section {
-    padding: 20px;
-    width: 80%;
-}
-}
+
 
 /**********************************footer******************/
 
@@ -634,8 +638,13 @@ footer {
     display: table-cell;
     padding: 10px;
     margin: auto;
+    -webkit-transition:transform .4s;
+    -o-transition:transform .4s;
+    transition:transform .4s;
 }
-
+.share-group i:hover {
+transform:scale(1.2,1.2);
+}
 .copy {
     padding-bottom: 20px;
 }

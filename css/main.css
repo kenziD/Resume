@@ -15,12 +15,8 @@ html {
     width: 100%;
 }
 
-
 /****************html的盒模型是border-box,其余的继承，这样的好处是，如果想要设置成content-box，后面的也可以继承*/
-
-
 /*简直太棒了！ http://www.cnblogs.com/wangfupeng1988/p/4287292.html*/
-
 html {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -318,7 +314,7 @@ header {
     position: relative;
     top: 5%;
     margin: auto;
-    width: 80%;
+    width: 100%;
 }
 
 .icon-group .icon {
@@ -440,11 +436,12 @@ header {
     width: 30%;
     /*margin-left: -100px;*/
     /*margin-top: -100px;*/
+    /*js实现*/
     text-align: center;
     border: solid;
     border-width: 30px 0 30px 30px;
     background: #000;
-    /*border-radius: 100px 0 0 100px;/*画半圆*/
+    /*border-radius: 100px 0 0 100px;/*由js实现*/
 }
 
 .mask {
@@ -462,6 +459,7 @@ header {
     border-color: #14bfff;
     transform: rotate(0deg);
     /*transform-origin:100px 100px;*/
+    /*js实现*/
 }
 
 .right {
@@ -500,19 +498,16 @@ header {
 /*********************************pro-show*******************/
 
 #pro-show {
-    background: #2F2828;
+    background: #000;
     color: #fff;
 }
 
 .show-preview >div {
-    /*还可以这样写！使文字和图片并列*/
     display: inline-block;
 }
 
 .show-preview {
-    position: relative;
     display: flex;
-    text-align: center;
     font-size: 0px;
 }
 
@@ -522,7 +517,6 @@ header {
 }
 
 .show-preview .img-section {
-    position: relative;
     width: 45%;
     overflow: hidden;
 }
@@ -540,6 +534,7 @@ header {
 }
 
 .text-section {
+    /*对应前面的display:flex;*/
     margin: auto;
     width: 55%;
     text-align: left;

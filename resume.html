@@ -12,7 +12,7 @@
 
 <body>
     <!---***********************loading************** -->
-    <div class="se-pre-con"></div>
+    <!-- <div class="se-pre-con"></div> -->
     <!-- *********************mask******************** -->
     <div id="mask-nav">
         <ul>
@@ -38,7 +38,7 @@
         </video>
         <!--nav-->
         <nav id="nav">
-            <ul>
+            <ul class="nav-list">
                 <li class="logo">
                     <h1>KenziD</h1></li>
                 <a href="#">
@@ -57,14 +57,14 @@
                 <div class="nav down"></div>
             </div>
         </nav>
-		<!-- banner -->
+        <!-- banner -->
         <div id="banner">
             <div class="inner">
                 <h1>KenziD</h1>
-                <p>A Girl Who love Web Design and Programming</p>
+                <p>A Girl Who Love Web Design and Programming</p>
             </div>
-            <a id="more">
-                <button><span>MORE</span></button>
+            <a>
+                <button id="more"><span>MORE</span></button>
             </a>
         </div>
     </header>
@@ -83,11 +83,8 @@
     </section>
     <!-- skill -->
     <section id="skill">
-        <div class="heading">
-            <h2>技能树</h2>
-            <div class="subheading">
-            </div>
-        </div>
+        <h1 class="heading">Skill</h1>
+        <div class="hr"></div>
         <div class="card-group">
             <div class="card">
                 <span class="language">C</span>
@@ -134,8 +131,8 @@
                 <img src="img/project.jpg" alt="">
             </div>
             <div class="text-section">
-                <h2>标题2</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perferendis consequuntur praesentium quisquam voluptas vero earum nihil repellendus consequatur numquam? Nihil optio expedita, consequuntur officia repellat, ipsa et molestiae maxime.</p>
+                <h2>Introduction</h2>
+                <p>Micro aerial vehicles (MAVs) are small-scale aircraft which have been developing rapidly in recent years and are known as the best vehicles for the civil applications in the fields of surveil- lance, rescue missions, fire detection, agricultural spraying and reconnaissance. Thanks to their structural simplicity, relatively low cost and extraordinary manoeuvrability, great fascination and attention have been exerted on MAV design and control for development and research.</p>
             </div>
         </div>
         <div class="show-preview">
@@ -143,8 +140,8 @@
                 <a href="#"><img src="img/micro.png" alt=""></a>
             </div>
             <div class="text-section">
-                <h2>标题2</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perferendis consequuntur praesentium quisquam voluptas vero earum nihil repellendus consequatur numquam? Nihil optio expedita, consequuntur officia repellat, ipsa et molestiae maxime.</p>
+                <h2>System Modelling</h2>
+                <p>Aero-elastic effects, internal dynamics of engine, flexibility of the wings and the whole set of changing variables render the modelling of the complete dynamics of AR Drone 2 (the quadro- tor used in this project) highly challenging and unmanageable. Moreover, since AR Drone 2 has four rotors, which can be considered even more nonlinear than other rotorcraft despite its symmetrical mechanics. For the control purpose, a simplified model with main features must be considered and formed by the substantially decreased states and inputs. In the literature study, four models based on two different approaches (Euler-Lagrange and Newton-Euler) are discussed in depth. Consequently, this chapter is concise and only encompasses the models which are used in this project, more details on these can be found in</p>
             </div>
         </div>
         <div class="show-preview">
@@ -152,8 +149,8 @@
                 <img src="img/control.jpg" alt="">
             </div>
             <div class="text-section">
-                <h2>标题2</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perferendis consequuntur praesentium quisquam voluptas vero earum nihil repellendus consequatur numquam? Nihil optio expedita, consequuntur officia repellat, ipsa et molestiae maxime.</p>
+                <h2>Abstract</h2>
+                <p>This thesis focuses on the modelling and identification for auto-stabilization of a quadrotor (AR Drone 2) system through the implementation of a grey-box identification method for control purpose, which covers the results of the project addressing the grey-box identification of the nonlinear dynamic model for near-hover equilibrium. The methodology followed in this work addresses the specific issues of system modelling, model parameter estimation, simulation and bare-airframe system identification.</p>
             </div>
         </div>
     </section>
@@ -170,20 +167,17 @@
         </div>
     </footer>
 </body>
-
 <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 <!-- sweet-alert -->
 <script src="dist/sweetalert.min.js"></script>
 <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
 <!-- loading....... -->
 <script type="text/javascript">
-// Wait for window load
-$(window).load(function() {
-    // Animate loader off screen
-    setTimeout(function() {
-        $(".se-pre-con").fadeOut("slow");;
-    });
-});
+// $(window).load(function() {
+//     setTimeout(function() {
+//         $(".se-pre-con").fadeOut("slow");;
+//     });
+// });
 </script>
 <script type="text/javascript" src="js/myJS.js"></script>
 

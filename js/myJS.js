@@ -1,4 +1,5 @@
 
+
 /**************nav导航栏小图标 动画效果*************************/
 
 var nav_icon = {
@@ -28,7 +29,7 @@ setTimeout(function() {
 };
 
 $('#hamburger').click(function(e) {
-	console.log($(this).attr('class'));
+
 	var class_name = $(this).attr('class');
 	if(class_name=='close'){
     $('#mask-nav').css('display', 'flex');

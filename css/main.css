@@ -16,14 +16,10 @@ html {
 }
 
 
-/****响应式?***/
-
-html {
-    -webkit-text-size-adjust: 100%
-}
-
-
 /****************html的盒模型是border-box,其余的继承，这样的好处是，如果想要设置成content-box，后面的也可以继承*/
+
+
+/*简直太棒了！ http://www.cnblogs.com/wangfupeng1988/p/4287292.html*/
 
 html {
     -webkit-box-sizing: border-box;
@@ -43,53 +39,53 @@ a {
     text-decoration: none;
 }
 
-a:link {
-    color: #fff;
-}
-/* 未访问的链接 */
-
-a:visited {
-    color: #fff;
-}
-/* 已访问的链接 */
-
-a:hover {
-    color: #fff;
-}
-/* 鼠标移动到链接上 */
-
+a:link,
+a:visited,
+a:hover,
 a:active {
     color: #fff;
 }
-/* 选定的链接 */
+
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+button {
+    outline: none;
+    /*去除button点击过后的外边框*/
+    border: none;
+}
 
 
 /*******loading page******/
 
 .se-pre-con {
+    z-index: 9999;
     position: fixed;
     left: 0px;
     top: 0px;
     width: 100%;
     height: 100%;
-    z-index: 9999;
     background: url(../img/Preloader_3.gif) center no-repeat #fff;
 }
 
+
 /*********************nav*********************/
+
 header {
-    background: url(../img/bg2.jpg);
-    /*一定要注意是上一级目录*/
-    background-size: cover;
     height: 100%;
     width: 100%;
+    background: url(../img/bg2.jpg) no-repeat;
+    background-size: cover;
+    overflow: hidden;
     /*background-attachment: fixed;*/
     /*这样背景图片就不会动了*/
 }
 
 .video {
     position: absolute;
-    z-index: 0;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -106,32 +102,29 @@ header {
 }
 
 #nav {
-    height: 50px;
-    width: 100%;
-    position: fixed;
-    /*让导航栏一直在上面*/
     z-index: 3;
+    position: fixed;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
     background-color: #fff;
-    margin: 0;
+    text-align: right;
     -webkit-transition: all 1s;
     -o-transition: all 1s;
     transition: all 1s;
-    text-align: right;
-    line-height: 50px;
 }
 
-nav ul {
+.nav-list {
     display: block;
     color: #000;
     list-style: none;
     /*去掉li前面的点*/
-    margin: 0 auto;
     -webkit-transition: all 1s;
     -o-transition: all 1s;
     transition: all 1s;
 }
 
-nav ul li {
+.nav-list li {
     display: inline-block;
     margin-right: 20px;
 }
@@ -141,25 +134,24 @@ nav ul li {
 }
 
 .logo h1 {
-    margin: 0 20px;
+    margin-left: 20px;
 }
 
-ul a:link,
-ul a:visited,
-ul a:hover,
-a:active {
+.nav-list a:link,
+.nav-list a:visited,
+.nav-list a:hover,
+.nav-list a:active {
     color: #000;
 }
 
 #hamburger {
-    z-index: 3;
-    width: 50px;
-    height: 50px;
-    opacity: 0;
     position: absolute;
     top: 0;
     left: 0;
     margin: auto;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
     transition: all 1s;
 }
 
@@ -190,14 +182,16 @@ a:active {
 /***************************mask*************************/
 
 #mask-nav {
+    z-index: 2;
     position: fixed;
-    display: none;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 2;
+    display: none;
     background: rgba(0, 0, 0, 0.8);
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
     transition: all 1s;
     color: #fff;
 }
@@ -212,10 +206,9 @@ a:active {
     /*文字水平居中*/
 }
 
-#mask-nav ul li {
-    color: white;
+#mask-nav li {
     width: 100%;
-    margin-top: 3%;
+    margin-top: 5%;
 }
 
 #mask-nav ul li:hover {
@@ -236,61 +229,45 @@ a:active {
 
 #banner .inner {
     /*设置inner的宽度*/
-    margin: 0 auto;
-    /*上下为0，左右为auto 使其居中*/
-    text-align: center;
     position: relative;
     top: 20%;
-    /*往下来一点*/
-}
-
-#banner .inner h1 {
-    margin: 0 auto;
-    /*有多余的行高*/
+    text-align: center;
 }
 
 #banner .inner p {
-    line-height: 20px;
-    margin: 10px auto;
-}
-
-button {
-    outline: none;
-    /*去除button点击过后的外边框*/
-    border: none;
-    background: #333;
-    /*背景颜色*/
-    color: #eee;
-    /*文字颜色*/
+    margin-top: 20px;
 }
 
 #banner button {
-    border-radius: 5px;
     position: absolute;
-    /**************用absolute left:0 right:0 margin:atuo实现居中*/
     left: 0;
     right: 0;
     margin: auto;
+    border-radius: 5px;
     height: 50px;
     width: 100px;
     bottom: 10%;
     font-size: 16px;
     color: #eee;
+    background: #333;
+    /*背景颜色*/
+    -webkit-transition: color 1s;
+    -o-transition: color 1s;
     transition: color 1s;
     /*按钮的上文字的颜色加了过度效果*/
 }
 
 #banner button:before {
-    border-radius: 5px;
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    background: #eee;
     width: 0%;
     height: 100%;
-    color: #eee;
-    display: flex;
+    border-radius: 5px;
+    background: #eee;
+    -webkit-transition: width .4s ease;
+    -o-transition: width .4s ease;
     transition: width .4s ease;
 }
 
@@ -315,14 +292,13 @@ button {
 /***************************recommend**********************/
 
 #recommend {
-    position: relative;
-    font-size: 12px;
     height: 100%;
     width: 100%;
     text-align: center;
-    background-color: #171D25;
     color: #fff;
-    border: solid 1px #171D25;
+    background-color: #000;
+    border-top: solid 1px #171D25;
+    border-bottom: solid 1px #171D25;
     /*避免子元素的margin-top塌陷*/
 }
 
@@ -331,18 +307,18 @@ button {
     margin: 10% auto 5% auto
 }
 
-#recommend .hr {
+.hr {
     width: 100%;
-    margin: 1% auto;
     height: 2px;
-    background: rgb(47, 147, 79);
+    margin: 1% auto;
+    background: #00688B;
 }
 
 .icon-group {
     position: relative;
-    width: 80%;
-    margin: auto;
     top: 5%;
+    margin: auto;
+    width: 80%;
 }
 
 .icon-group .icon {
@@ -351,6 +327,8 @@ button {
     max-width: 15%;
     margin: 0 7%;
     border-radius: 50%;
+    -webkit-transition: transform .5s, opacity .5s;
+    -o-transition: transform .5s, opacity .5s;
     transition: transform .5s, opacity .5s;
 }
 
@@ -360,7 +338,7 @@ button {
 }
 
 .icon2 {
-    opacity: 1;
+    opacity: 0;
 }
 
 .icon3 {
@@ -370,10 +348,12 @@ button {
 
 .icon-name {
     position: absolute;
-    opacity: 0;
-    font-size: 20px;
     margin-left: -18%;
     margin-top: 18%;
+    opacity: 0;
+    font-size: 20px;
+    -webkit-transition: opacity .4s;
+    -o-transition: opacity .4s;
     transition: opacity .8s;
 }
 
@@ -384,7 +364,6 @@ button {
         margin: 20% auto;
     }
     .icon-group {
-        height: 50%;
         width: 50%;
         float: left;
         top: -5%;
@@ -422,45 +401,32 @@ button {
 #skill {
     background: #000;
     color: #000;
-    /*min-height: 100%;*/
     height: 100%;
-    /*min-height: 100%;*/
     padding: 2% 10%;
     width: 100%;
     color: white;
 }
 
 .heading {
-    min-width: 100%;
     margin: 20px auto;
     text-align: center;
-    letter-spacing: 1px;
 }
 
 .card-group {
     height: 100%;
     font-size: 0px;
-    z-index: -2;
 }
 
 .card-group .card {
-    padding: 5% 0;
-    color: #0cf;
     z-index: 1;
-    position: relative;
-    overflow: hidden;
-    /*要不然盒子会乱*/
     display: inline-block;
+    position: relative;
     width: 33%;
     height: 40%;
-    /*min-height: 50%;感觉这句没什么乱用 因为父级元素都没有设置height啊,笨**/
+    padding: 5% 0;
     font-size: 20px;
     text-align: center;
-    /*padding: 20px;*/
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    /*简直太棒了！ http://www.cnblogs.com/wangfupeng1988/p/4287292.html*/
+    color: #0cf;
 }
 
 
@@ -471,11 +437,10 @@ button {
     position: absolute;
     left: 50%;
     top: 50%;
+    width: 30%;
     /*margin-left: -100px;*/
     /*margin-top: -100px;*/
     text-align: center;
-    box-sizing: border-box;
-    width: 30%;
     border: solid;
     border-width: 30px 0 30px 30px;
     background: #000;
@@ -483,8 +448,8 @@ button {
 }
 
 .mask {
-    border-color: #00688B;
     z-index: 0;
+    border-color: #00688B;
 }
 
 .left1,
@@ -507,9 +472,9 @@ button {
 }
 
 .language {
-    font-size: 1em;
-    position: relative;
     z-index: 2;
+    position: relative;
+    font-size: 1em;
     /*line-height: 200px;*/
 }
 
@@ -522,12 +487,12 @@ button {
         height: 30%;
     }
     .language {
-        line-height: 1em;
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         margin: auto;
+        line-height: 1em;
     }
 }
 
@@ -546,9 +511,9 @@ button {
 
 .show-preview {
     position: relative;
+    display: flex;
     text-align: center;
     font-size: 0px;
-    display: flex;
 }
 
 .show-preview:nth-child(odd) {
@@ -594,7 +559,7 @@ button {
 
 .text-section p {
     line-height: 30px;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 @media screen and (max-width: 767px) {

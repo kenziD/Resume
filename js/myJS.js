@@ -176,5 +176,5 @@ function static_show_piechart(degree, object) {
 
 /********click weixin******/
 $('.fa-weixin').click(function(){
-  sweetAlert("haha...", "我才不告诉你微信呢")
+  sweetAlert("haha...", "Keep thinking!")
 });

@@ -300,9 +300,12 @@ header {
 
 .wrapper {
     width: 80%;
-    margin: 10% auto 5% auto
+    margin: 10% auto 5% auto;
 }
 
+.wrapper p{
+    line-height: 2em;
+}
 .hr {
     width: 100%;
     height: 2px;
@@ -312,7 +315,7 @@ header {
 
 .icon-group {
     position: relative;
-    top: 5%;
+    /*top: 5%;*/
     margin: auto;
     width: 100%;
 }

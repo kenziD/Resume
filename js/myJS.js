@@ -175,11 +175,11 @@ function static_show_piechart(degree, object) {
 /********click weixin******/
 $('.fa-weixin').click(function() {
     // sweetAlert("haha...", "Keep thinking!")
-    $(".shadow-mask").addClass("active");
-    $(".joke").addClass("active");
+    $(".shadow-mask").addClass("mask-active");
+    $(".joke").addClass("alert-active");
 });
 
 $(".close-alert").click(function() {
-    $(".shadow-mask").removeClass("active");
-    $(".joke").removeClass("active");
+    $(".shadow-mask").removeClass("mask-active");
+    $(".joke").removeClass("alert-active");
 })

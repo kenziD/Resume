@@ -15,9 +15,6 @@ html {
     width: 100%;
 }
 
-
-
-
 html {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -499,6 +496,9 @@ header {
         margin: auto;
         line-height: 1em;
     }
+    .joke {
+        width: 80vw;
+    }
 }
 
 
@@ -633,7 +633,7 @@ footer {
     background: white;
     border-radius: 8px;
     height: 30vh;
-    width: 80vw;
+    width: 30vw;
     text-align: center;
     margin: auto;
     /*vertical-align: middle;*/
@@ -649,6 +649,7 @@ footer {
     visibility: visible;
     transform: rotateZ(10deg);
 }
+
 .mask-active {
     visibility: visible;
 }

@@ -1,50 +1,48 @@
-
-
 /**************nav导航栏小图标 动画效果*************************/
 
 var nav_icon = {
     navicon_to_remove: function() {
         $('.up').css('top', '0 ');
-setTimeout(function() {
-        $('.up').css('transform', 'rotate3d(0,0,1,45deg) ');
-          }, 200);
+        setTimeout(function() {
+            $('.up').css('transform', 'rotate3d(0,0,1,45deg) ');
+        }, 200);
         $('.down').css('top', '0 ');
- setTimeout(function() {
-        $('.down').css('transform', 'rotate3d(0,0,1,-45deg) ');
-         }, 200);
+        setTimeout(function() {
+            $('.down').css('transform', 'rotate3d(0,0,1,-45deg) ');
+        }, 200);
         $('.middle').css('opacity', '0');
         $('.nav').css('background', '#104E8B');
     },
     remove_to_navicon: function() {
         $('.up').css('transform', 'rotate3d(0,0,1,0deg) ');
         setTimeout(function() {
-        $('.up').css('top', '-20px ');
-         }, 200);
+            $('.up').css('top', '-20px ');
+        }, 200);
         $('.down').css('transform', 'rotate3d(0,0,1,0deg) ');
         setTimeout(function() {
-        $('.down').css('top', '20px');
-         }, 200);
+            $('.down').css('top', '20px');
+        }, 200);
         $('.middle').css('opacity', '1');
     }
 };
 
 $('#hamburger').click(function(e) {
 
-	var class_name = $(this).attr('class');
-	if(class_name=='close'){
-    $('#mask-nav').css('display', 'flex');
-    nav_icon.navicon_to_remove();
-    setTimeout(function() {
-        $('#hamburger').removeClass('close').addClass('open');
-    }, 500);
-	}
-	if(class_name=='open'){
-		$('#mask-nav').css('display', 'none');
-    nav_icon.remove_to_navicon();
-    setTimeout(function() {
-        $('#hamburger').removeClass('open').addClass('close');
-    }, 500);
-	}
+    var class_name = $(this).attr('class');
+    if (class_name == 'close') {
+        $('#mask-nav').css('display', 'flex');
+        nav_icon.navicon_to_remove();
+        setTimeout(function() {
+            $('#hamburger').removeClass('close').addClass('open');
+        }, 500);
+    }
+    if (class_name == 'open') {
+        $('#mask-nav').css('display', 'none');
+        nav_icon.remove_to_navicon();
+        setTimeout(function() {
+            $('#hamburger').removeClass('open').addClass('close');
+        }, 500);
+    }
 });
 
 $('#mask-nav li').click(function() {
@@ -73,7 +71,7 @@ $(window).scroll(function() {
         $("#nav").css('margin-top', '20px');
         $("#nav").css('margin-left', '20px');
         $('#hamburger').css('opacity', '1');
-$('#nav').css("border-radius","5px");
+        $('#nav').css("border-radius", "5px");
     }
     if (document.body.scrollTop == 0) {
         $('#nav').css('width', '100%');
@@ -83,7 +81,7 @@ $('#nav').css("border-radius","5px");
         $("#nav").css('margin-top', '0');
         $("#nav").css('margin-left', '0');
         $('#hamburger').css('opacity', '0');
-        $('#nav').css("border-radius","0px");
+        $('#nav').css("border-radius", "0px");
 
     }
     /*********************三个icon的特效***********************/
@@ -175,6 +173,13 @@ function static_show_piechart(degree, object) {
 };
 
 /********click weixin******/
-$('.fa-weixin').click(function(){
-  sweetAlert("haha...", "Keep thinking!")
+$('.fa-weixin').click(function() {
+    // sweetAlert("haha...", "Keep thinking!")
+    $(".shadow-mask").addClass("active");
+    $(".joke").addClass("active");
 });
+
+$(".close-alert").click(function() {
+    $(".shadow-mask").removeClass("active");
+    $(".joke").removeClass("active");
+})

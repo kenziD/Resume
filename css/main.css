@@ -15,8 +15,12 @@ html {
     width: 100%;
 }
 
+
 /****************html的盒模型是border-box,其余的继承，这样的好处是，如果想要设置成content-box，后面的也可以继承*/
+
+
 /*简直太棒了！ http://www.cnblogs.com/wangfupeng1988/p/4287292.html*/
+
 html {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -303,9 +307,10 @@ header {
     margin: 10% auto 5% auto;
 }
 
-.wrapper p{
+.wrapper p {
     line-height: 2em;
 }
+
 .hr {
     width: 100%;
     height: 2px;
@@ -605,4 +610,51 @@ footer {
 
 .copy {
     padding-bottom: 20px;
+}
+
+.shadow-mask {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: black;
+    opacity: 0.8;
+    /*display: none;*/
+    visibility: hidden;
+}
+
+.joke {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    height: 200px;
+    width: 500px;
+    text-align: center;
+    margin: auto;
+    /*vertical-align: middle;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    visibility: hidden;
+    transition: transform 1s ease;
+}
+
+.active {
+    visibility: visible;
+    transform: rotateZ(10deg);
+}
+
+.close-alert {
+    background: lightskyblue;
+    color: white;
+    padding: 10px 30px;
+    font-size: 12px;
+    width: 100px;
+    border-radius: 8px;
 }

@@ -91,9 +91,6 @@ $(window).scroll(function() {
         $(".icon").css({
             opacity: 1
         });
-        $(".icon-name").css({
-            opacity: 1
-        });
     }
 
     /********当滚动条滑到饼状图页开始执行动画******************/

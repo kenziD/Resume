@@ -13,6 +13,7 @@ body,
 html {
     height: 100%;
     width: 100%;
+    background: #454545;
 }
 
 html {
@@ -69,7 +70,8 @@ button {
 
 header {
     height: 100%;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     background: url(../img/bg2.jpg) no-repeat;
     background-size: cover;
     overflow: hidden;
@@ -98,7 +100,7 @@ header {
     position: fixed;
     height: 50px;
     line-height: 50px;
-    width: 100%;
+    width: 80%;
     background-color: #fff;
     text-align: right;
     -webkit-transition: all 1s;
@@ -213,6 +215,7 @@ header {
 #banner {
     height: 100%;
     width: 100%;
+    margin: 0 auto;
     background: rgba(0, 0, 0, 0.2);
     /*这句放在这里也能实现这种遮罩的效果*/
     color: #fff;
@@ -286,7 +289,8 @@ header {
 .recommend {
     padding: 100px 150px;
     height: 100%;
-    width: 100%;
+    width: 80%;
+    margin:0 auto;
     text-align: center;
     color: #636363;
     background-color: #ededed;
@@ -418,7 +422,8 @@ header {
     color: #000;
     height: 100%;
     padding: 2% 10%;
-    width: 100%;
+    width: 80%;
+    margin:0 auto;
     color: #454545;
 }
 
@@ -522,6 +527,8 @@ header {
 #pro-show {
     background: #ededed;
     color: #636363;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .show-preview {
@@ -536,7 +543,7 @@ header {
 }
 
 .show-preview .img-section {
-    flex-basis: 50%;
+    flex-basis: 30%;
     overflow: hidden;
     text-align: center;
     order: -1;
@@ -558,7 +565,7 @@ header {
 .text-section {
     margin: auto;
     text-align: left;
-    flex-basis: 50%;
+    flex-basis: 70%;
     padding: 100px 20px;
     
 }
@@ -604,6 +611,8 @@ footer {
     color: #fff;
     min-height: 200px;
     text-align: center;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .share-group {

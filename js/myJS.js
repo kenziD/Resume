@@ -74,7 +74,7 @@ $(window).scroll(function() {
         $('#nav').css("border-radius", "5px");
     }
     if (document.body.scrollTop == 0) {
-        $('#nav').css('width', '100%');
+        $('#nav').css('width', '80%');
         setTimeout(function() {
             $('nav ul').css('display', 'block');
         }, 500);

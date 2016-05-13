@@ -8,11 +8,82 @@
     <link rel="stylesheet" href="normlize css/normlize.css">
     <link rel="stylesheet" type="text/css" href="font-awesome-4.4.0/css/font-awesome.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/loading.css">
 </head>
 
 <body>
     <!---***********************loading************** -->
     <!-- <div class="se-pre-con"></div> -->
+    <div class="loadingMask">
+        <section class="loading container">
+            <div class="cube row1">
+                <figure class="front-cube">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </figure>
+                <figure class="back-cube">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </figure>
+                <figure class="right-cube">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </figure>
+                <figure class="left-cube">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </figure>
+            </div>
+            <div class="cube row2">
+                <figure class="front-cube">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </figure>
+                <figure class="back-cube">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </figure>
+                <figure class="right-cube">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </figure>
+                <figure class="left-cube">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </figure>
+            </div>
+            <div class="cube row3">
+                <figure class="front-cube">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </figure>
+                <figure class="back-cube">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </figure>
+                <figure class="right-cube">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </figure>
+                <figure class="left-cube">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </figure>
+            </div>
+        </section>
+    </div>
     <!-- *********************mask******************** -->
     <div id="mask-nav">
         <ul>
@@ -31,11 +102,11 @@
         </ul>
     </div>
     <header>
-        <video id="my-video" class="video" autoplay muted loop>
+        <!--         <video id="my-video" class="video" autoplay muted loop>
             <source src="http://callmenick.com/_development/video/full-screen-background-video/media/demo.mp4" type="video/mp4">
             <source src="media/demo.ogv" type="video/ogg">
             <source src="media/demo.webm" type="video/webm"> Your browser doesn't support HTML5 video. Here's a <a href="#">link</a> to download the video.
-        </video>
+        </video> -->
         <!--nav-->
         <nav id="nav">
             <ul class="nav-list">
@@ -73,10 +144,7 @@
         <div class="wrapper">
             <h1>About me</h1>
             <div class="hr"></div>
-            <p>I am a postgraduate of Grade Two.
-            My research is about quadrotor.
-            Highly intrested in Web Font-End Development.
-            Love programming.Love sports.</p>
+            <p>I am a postgraduate of Grade Two. My research is about quadrotor. Highly intrested in Web Font-End Development. Love programming.Love sports.</p>
         </div>
         <div class="icon-group">
             <a href="https://github.com/kenziD/Resume"><img class="icon icon1" src="img/github2.png"> <span class="icon-name">GITHUB</span></a>
@@ -134,8 +202,10 @@
                 <img src="img/project.jpg" alt="">
             </div>
             <div class="text-section">
-                <h2>Introduction</h2>
-                <p>Micro aerial vehicles (MAVs) are small-scale aircraft which have been developing rapidly in recent years and are known as the best vehicles for the civil applications in the fields of surveil- lance, rescue missions, fire detection, agricultural spraying and reconnaissance. Thanks to their structural simplicity, relatively low cost and extraordinary manoeuvrability, great fascination and attention have been exerted on MAV design and control for development and research.</p>
+                <h2 class="text-header">Introduction</h2>
+                <div class="text-content">
+                    <p>Micro aerial vehicles (MAVs) are small-scale aircraft which have been developing rapidly in recent years and are known as the best vehicles for the civil applications in the fields of surveil- lance, rescue missions, fire detection, agricultural spraying and reconnaissance. Thanks to their structural simplicity, relatively low cost and extraordinary manoeuvrability, great fascination and attention have been exerted on MAV design and control for development and research.</p>
+                </div>
             </div>
         </div>
         <div class="show-preview">
@@ -143,8 +213,12 @@
                 <a href="#"><img src="img/micro.png" alt=""></a>
             </div>
             <div class="text-section">
-                <h2>System Modelling</h2>
-                <p>Aero-elastic effects, internal dynamics of engine, flexibility of the wings and the whole set of changing variables render the modelling of the complete dynamics of AR Drone 2 (the quadro- tor used in this project) highly challenging and unmanageable. Moreover, since AR Drone 2 has four rotors, which can be considered even more nonlinear than other rotorcraft despite its symmetrical mechanics. For the control purpose, a simplified model with main features must be considered and formed by the substantially decreased states and inputs. In the literature study, four models based on two different approaches (Euler-Lagrange and Newton-Euler) are discussed in depth. Consequently, this chapter is concise and only encompasses the models which are used in this project, more details on these can be found in</p>
+                <h2 class="text-header">System Modelling</h2>
+                <div class="text-content">
+                    <p>
+                        Aero-elastic effects, internal dynamics of engine, flexibility of the wings and the whole set of changing variables render the modelling of the complete dynamics of AR Drone 2 (the quadro- tor used in this project) highly challenging and unmanageable. Moreover, since AR Drone 2 has four rotors, which can be considered even more nonlinear than other rotorcraft despite its symmetrical mechanics. For the control purpose, a simplified model with main features must be considered and formed by the substantially decreased states and inputs. In the literature study, four models based on two different approaches (Euler-Lagrange and Newton-Euler) are discussed in depth. Consequently, this chapter is concise and only encompasses the models which are used in this project, more details on these can be found in Aero-elastic effects, internal dynamics of engine, flexibility of the wings and the whole set of changing variables render the modelling of the complete dynamics of AR Drone 2 (the quadro- tor used in this project) highly challenging and unmanageable. Moreover, since AR Drone 2 has four rotors, which can be considered even more nonlinear than other rotorcraft despite its symmetrical mechanics. For the control purpose, a simplified model with main features must be considered and formed by the substantially decreased states and inputs. In the literature study, four models based on two different approaches (Euler-Lagrange and Newton-Euler) are discussed in depth. Consequently, this chapter is concise and only encompasses the models which are used in this project, more details on these can be found in a simplified model with main features must be considered and formed by the substantially decreased states and inputs. In the literature study, four models based on two different approaches (Euler-Lagrange and Newton-Euler) are discussed in depth. Consequently, this chapter is concise and only encompasses the models which are used in this project, more details on these can be found in
+                    </p>
+                </div>
             </div>
         </div>
         <div class="show-preview">
@@ -152,8 +226,10 @@
                 <img src="img/control.jpg" alt="">
             </div>
             <div class="text-section">
-                <h2>Abstract</h2>
-                <p>This thesis focuses on the modelling and identification for auto-stabilization of a quadrotor (AR Drone 2) system through the implementation of a grey-box identification method for control purpose, which covers the results of the project addressing the grey-box identification of the nonlinear dynamic model for near-hover equilibrium. The methodology followed in this work addresses the specific issues of system modelling, model parameter estimation, simulation and bare-airframe system identification.</p>
+                <h2 class="text-header">Abstract</h2>
+                <div class="text-content">
+                    <p>This thesis focuses on the modelling and identification for auto-stabilization of a quadrotor (AR Drone 2) system through the implementation of a grey-box identification method for control purpose, which covers the results of the project addressing the grey-box identification of the nonlinear dynamic model for near-hover equilibrium. The methodology followed in this work addresses the specific issues of system modelling, model parameter estimation, simulation and bare-airframe system identification.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -175,18 +251,16 @@
         <p>keep thinking...</p>
         <button class="close-alert" type="button">ok</button>
     </div>
-</body>
+    --></body>
 <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-<!-- sweet-alert -->
-<script src="dist/sweetalert.min.js"></script>
-<link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+<script type="text/javascript" src="js/loading.js"></script>
 <!-- loading....... -->
 <script type="text/javascript">
-// $(window).load(function() {
-//     setTimeout(function() {
-//         $(".se-pre-con").fadeOut("slow");;
-//     });
-// });
+$(window).load(function() {
+    setTimeout(function() {
+        $(".loadingMask").fadeOut("slow");;
+    }, 1000);
+});
 </script>
 <script type="text/javascript" src="js/myJS.js"></script>
 

@@ -97,7 +97,7 @@ $(window).scroll(function() {
     }
 
     /********当滚动条滑到饼状图页开始执行动画******************/
-    if (document.body.scrollTop > ($("#skill").offset().top - 50) && document.body.scrollTop < ($("#skill").offset().top + 50)) {
+    if (document.body.scrollTop > ($("#skill").offset().top - 100) && document.body.scrollTop < ($("#skill").offset().top + 100)) {
         /*************如果是手机端,静态展示************/
         if (window.screen.width < 767) {
             static_show_piechart(200, '.left1');

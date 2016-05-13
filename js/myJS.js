@@ -51,7 +51,7 @@ $('#mask-nav li').click(function() {
     })
     /*************点击更多 按钮滑动到下一页******************/
 $("#more").click(function() {
-    var $page2 = $("#recommend");
+    var $page2 = $(".recommend");
     var offset = $page2.offset();
     // console.log(offset.top);
     $('html,body').animate({
@@ -86,7 +86,7 @@ $(window).scroll(function() {
     }
     /*********************三个icon的特效***********************/
     // 滚动条到达第二个页面，图片显现，透明度为1，且滑动到原位置
-    if (document.body.scrollTop == $("#recommend").offset().top) {
+    if (document.body.scrollTop == $(".recommend").offset().top) {
         $(".icon").css('-webkit-transform', 'translateX(0px)');
         $(".icon").css({
             opacity: 1
@@ -152,7 +152,7 @@ function rotate(degree, object, rotate_origin) {
             $(this).css('transform', 'rotate(' + now + 'deg)');
             if (now > 179) {
                 $(object).prev().css('z-index', '-2'); /*邻近的上一个兄弟节点*/
-                $(object + '+ .right').css('border-color', '#14bfff'); /*邻近的下一个兄弟节点*/
+                $(object + '+ .right').css('border-color', '#4CE0D2'); /*邻近的下一个兄弟节点*/
             }
         },
         duration: 2000
@@ -165,7 +165,7 @@ function static_show_piechart(degree, object) {
     $(object).css('transform', 'rotate(' + degree + 'deg)');
     if (degree > 179) {
         $(object).prev().css('z-index', '-2'); /*邻近的上一个兄弟节点*/
-        $(object + '+ .right').css('border-color', '#14bfff'); /*邻近的下一个兄弟节点*/
+        $(object + '+ .right').css('border-color', '#4CE0D2'); /*邻近的下一个兄弟节点*/
     }
 };
 

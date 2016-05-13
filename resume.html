@@ -131,8 +131,8 @@
         <!-- banner -->
         <div id="banner">
             <div class="inner">
-                <h1>KenziD</h1>
-                <p>A Girl Who Love Web Design and Programming</p>
+                <h1>刁婉玉</h1>
+                <p>前端爱好者</p>
             </div>
             <a>
                 <button id="more"><span>MORE</span></button>
@@ -140,18 +140,19 @@
         </div>
     </header>
     <!-- recommend -->
-    <section id="recommend">
+    <section class="recommend">
         <div class="wrapper">
-            <h1>About me</h1>
+            <h1>关于我</h1>
             <div class="hr"></div>
-            <p>I am a postgraduate of Grade Two. My research is about quadrotor. Highly intrested in Web Font-End Development. Love programming.Love sports.</p>
+            <p>厦门大学研二在读。从hexo开始爱上前端。对于css3的动画效果相当感兴趣。经常琢磨怎么做出好看的动画。</p>
+            <p>左边是github地址，中间是博客，右边为了对称。</p>
         </div>
         <div class="icon-group">
             <a class="icon-link icon1-link" href="https://github.com/kenziD/Resume">
                 <img class="icon icon1" src="img/github2.png">
             </a>
             <a class="icon-link icon2-link" href="http://kenzid.github.io">
-                <img src="img/logo.png" class="icon icon2">
+                <img src="img/kenzi.png" class="icon icon2">
             </a>
             <a class="icon-link icon3-link" href="http://twitter.com">
                 <img src="img/twitter.png" class="icon icon3">
@@ -205,37 +206,38 @@
     <section id="pro-show">
         <div class="show-preview">
             <div class="text-section">
-                <h2 class="text-header">Introduction</h2>
+                <h2 class="text-header"><a href="https://github.com/kenziD/chrome-Extension-Example/tree/master/changeBgColor">Chrome 护眼小插件</a></h2>
                 <div class="text-content">
-                    <p>Micro aerial vehicles (MAVs) are small-scale aircraft which have been developing rapidly in recent years and are known as the best vehicles for the civil applications in the fields of surveil- lance, rescue missions, fire detection, agricultural spraying and reconnaissance. Thanks to their structural simplicity, relatively low cost and extraordinary manoeuvrability, great fascination and attention have been exerted on MAV design and control for development and research.</p>
+                    <p>白色的光太刺眼？用了这款插件就可以享受温和的背景色。支持自己选择区块调色。学校电脑很容易眼疲劳。每次手动修改背景色嫌麻烦后开发了这个小插件。</p>
                 </div>
             </div>
             <div class="img-section">
-                <img src="img/project.jpg" alt="">
+                <img src="img/logo.png" alt="">
             </div>
         </div>
         <div class="show-preview">
             <div class="text-section">
-                <h2 class="text-header">System Modelling</h2>
+                <h2 class="text-header"><a href="https://github.com/kenziD/python-spider">股票数据采集</a></h2>
                 <div class="text-content">
                     <p>
-                        Aero-elastic effects, internal dynamics of engine, flexibility of the wings and the whole set of changing variables render the modelling of the complete dynamics of AR Drone 2 (the quadro- tor used in this project) highly challenging and unmanageable. Moreover, since AR Drone 2 has four rotors, which can be considered even more nonlinear than other rotorcraft despite its symmetrical mechanics. For the control purpose, a simplified model with main features must be considered and formed by the substantially decreased states and inputs. In the literature study, four models based on two different approaches (Euler-Lagrange and Newton-Euler) are discussed in depth. Consequently, this chapter is concise and only encompasses the models which are used in this project, more details on these can be found in Aero-elastic effects, internal dynamics of engine, flexibility of the wings and the whole set of changing variables render the modelling of the complete dynamics of AR Drone 2 (the quadro- tor used in this project) highly challenging and unmanageable. Moreover, since AR Drone 2 has four rotors, which can be considered even more nonlinear than other rotorcraft despite its symmetrical mechanics. For the control purpose, a simplified model with main features must be considered and formed by the substantially decreased states and inputs. In the literature study, four models based on two different approaches (Euler-Lagrange and Newton-Euler) are discussed in depth. Consequently, this chapter is concise and only encompasses the models which are used in this project, more details on these can be found in a simplified model with main features must be considered and formed by the substantially decreased states and inputs. In the literature study, four models based on two different approaches (Euler-Lagrange and Newton-Euler) are discussed in depth. Consequently, this chapter is concise and only encompasses the models which are used in this project, more details on these can be found in
+                        股票分析项目，负责数据采集部分（Python)。爬虫主要采集雪球等网站的股票数据、新闻、网民评论等，大约爬取70万的数据量。爬虫通过分析网站暴露的一些接口，使用多线程爬去、Celery事务管理。大大提高了爬虫速度，从原本的1天减少到2小时就可爬完。爬取的数据使用MongoDB做存储。
                     </p>
                 </div>
             </div>
             <div class="img-section">
-                <a href="#"><img src="img/micro.png" alt=""></a>
+                <a href="#"><img src="img/xueqiu.png" alt=""></a>
             </div>
         </div>
         <div class="show-preview">
             <div class="text-section">
-                <h2 class="text-header">Abstract</h2>
+                <h2 class="text-header"><a href="https://github.com/kenziD/ANO">无人机项目</a></h2>
                 <div class="text-content">
-                    <p>This thesis focuses on the modelling and identification for auto-stabilization of a quadrotor (AR Drone 2) system through the implementation of a grey-box identification method for control purpose, which covers the results of the project addressing the grey-box identification of the nonlinear dynamic model for near-hover equilibrium. The methodology followed in this work addresses the specific issues of system modelling, model parameter estimation, simulation and bare-airframe system identification.</p>
+                    <p>编写基于捷联惯导系统的四旋翼飞行器的飞控程序（C语言）。其中包括编写角度融合算法、PID算法等，熟悉蓝牙、MPU6050,NRF24L01,陀螺仪、加速度计、磁力计等模块开发。 期间因研究需要开发了基于OpenCV的角度实时量测工具。将opencv处理的图像数据与串口数据进行对比,检测测量准确度(Python)
+                    </p>
                 </div>
             </div>
             <div class="img-section">
-                <img src="img/control.jpg" alt="">
+                <img src="img/quadcopter.png" alt="">
             </div>
         </div>
     </section>

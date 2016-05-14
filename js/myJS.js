@@ -26,8 +26,8 @@ var nav_icon = {
     }
 };
 
-$('#hamburger').click(function(e) {
-
+function showMask(e) {
+    console.log(this,$(this),this.target);
     var class_name = $(this).attr('class');
     if (class_name == 'close') {
         $('#mask-nav').css('display', 'flex');
@@ -43,7 +43,8 @@ $('#hamburger').click(function(e) {
             $('#hamburger').removeClass('open').addClass('close');
         }, 500);
     }
-});
+}
+$('#hamburger').click(showMask);
 
 $('#mask-nav li').click(function() {
         $('#mask-nav').css('display', 'none');
@@ -53,28 +54,23 @@ $('#mask-nav li').click(function() {
 $("#more").click(function() {
     var $page2 = $(".recommend");
     var offset = $page2.offset();
-    // console.log(offset.top);
     $('html,body').animate({
         scrollTop: offset.top
     }, 1000);
 });
 
+function Nav() {}
+Nav.showNavBar = function() {
+    $('#nav').css('width', '' + $('#nav').height() + 'px');
+    $('nav ul').css('display', 'none');
 
-// 监听滚动条
-$(window).scroll(function() {
-
-    /****************nav bar动态收缩效果************************/
-    if (document.body.scrollTop >= 100) {
-        $('#nav').css('width', '' + $('#nav').height() + 'px');
-        $('nav ul').css('display', 'none');
-
-        $("#nav").css('margin-top', '20px');
-        $("#nav").css('margin-left', '20px');
-        $('#hamburger').css('opacity', '1');
-        $('#nav').css("border-radius", "5px");
-    }
-    if (document.body.scrollTop == 0) {
-        $('#nav').css('width', '80%');
+    $("#nav").css('margin-top', '20px');
+    $("#nav").css('margin-left', '20px');
+    $('#hamburger').css('opacity', '1');
+    $('#nav').css("border-radius", "5px");
+}
+Nav.showHamburgur = function() {
+        $('#nav').css('width', '100%');
         setTimeout(function() {
             $('nav ul').css('display', 'block');
         }, 500);
@@ -82,6 +78,27 @@ $(window).scroll(function() {
         $("#nav").css('margin-left', '0');
         $('#hamburger').css('opacity', '0');
         $('#nav').css("border-radius", "0px");
+    }
+    // media query change
+function WidthChange(mq) {
+    if (document.body.scrollTop >= 100 || mq.matches) {
+        Nav.showNavBar();
+    }
+    if (document.body.scrollTop == 0 && !mq.matches) {
+        Nav.showHamburgur();
+    }
+}
+// 监听滚动条
+$(window).scroll(function() {
+    var mq = window.matchMedia("(max-width: 765px)");
+    mq.addListener(WidthChange);
+    WidthChange(mq);
+    /****************nav bar动态收缩效果************************/
+    if (document.body.scrollTop >= 100 || mq.matches) {
+        Nav.showNavBar();
+    }
+    if (document.body.scrollTop == 0 && !mq.matches) {
+        Nav.showHamburgur();
 
     }
     /*********************三个icon的特效***********************/
@@ -169,9 +186,11 @@ function static_show_piechart(degree, object) {
     }
 };
 
+
+
+
 /********click weixin******/
 $('.fa-weixin').click(function() {
-    // sweetAlert("haha...", "Keep thinking!")
     $(".shadow-mask").addClass("mask-active");
     $(".joke").addClass("alert-active");
 });

@@ -89,12 +89,6 @@ header {
     height: auto;
 }
 
-@media all and (max-width: 765px) {
-    .video {
-        display: none;
-    }
-}
-
 #nav {
     z-index: 3;
     position: fixed;
@@ -290,15 +284,16 @@ header {
     padding: 100px 150px;
     height: 100%;
     width: 80%;
-    margin:0 auto;
+    margin: 0 auto;
     text-align: center;
     color: #636363;
     background-color: #ededed;
     border-top: solid 1px #171D25;
-    /*border-bottom: solid 1px #171D25;*/
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
+    /*text-align: left;*/
 }
 
 .wrapper {
@@ -423,7 +418,7 @@ header {
     height: 100%;
     padding: 2% 10%;
     width: 80%;
-    margin:0 auto;
+    margin: 0 auto;
     color: #454545;
 }
 
@@ -529,6 +524,7 @@ header {
     color: #636363;
     width: 80%;
     margin: 0 auto;
+    padding: 30px;
 }
 
 .show-preview {
@@ -566,8 +562,7 @@ header {
     margin: auto;
     text-align: left;
     flex-basis: 70%;
-    padding: 100px 20px;
-    
+    padding: 50px 50px 50px 0;
 }
 
 .text-section a {
@@ -592,7 +587,7 @@ header {
 
 .text-content {
     font-size: 15px;
-    overflow: scroll;
+    /*overflow: scroll;*/
     line-height: 300px;
     /*height: 200px;*/
 }
@@ -689,4 +684,55 @@ footer {
     font-size: 12px;
     width: 100px;
     border-radius: 8px;
+}
+
+.support-wrap {
+    text-align: right;
+    height: 0;
+}
+
+.support {
+    position: absolute;
+    display: inline;
+}
+
+@media all and (orientation:portrait) {
+    header,
+    #nav,
+    .recommend,
+    #skill,
+    #pro-show,
+    footer {
+        width: 100%;
+    }
+    .text-section {
+        padding: 0;
+    }
+    .text-content {
+        max-width: 20em;
+        margin-bottom: 1em;
+    }
+    .wrapper {
+        max-width: 20em;
+    }
+    .joke {
+        width: 70vw;
+    }
+    #pro-show{
+        padding: 0;
+    }
+}
+
+@media all and (max-width: 765px) {
+    .video {
+        display: none;
+    }
+    header,
+    #nav,
+    .recommend,
+    #skill,
+    #pro-show,
+    footer {
+        width: 100%;
+    }
 }

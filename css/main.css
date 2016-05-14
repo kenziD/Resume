@@ -698,7 +698,6 @@ footer {
 
 @media all and (orientation:portrait) {
     header,
-    #nav,
     .recommend,
     #skill,
     #pro-show,
@@ -728,7 +727,6 @@ footer {
         display: none;
     }
     header,
-    #nav,
     .recommend,
     #skill,
     #pro-show,

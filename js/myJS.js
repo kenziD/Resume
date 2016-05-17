@@ -1,4 +1,8 @@
 $(window).ready(function() {
+    /*loading*/
+    setTimeout(function() {
+        $(".loadingMask").fadeOut("slow");;
+    }, 1000);
     /**************nav导航栏小图标 动画效果*************************/
     var nav_icon = {
         navicon_to_remove: function() {

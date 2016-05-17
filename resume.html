@@ -13,9 +13,8 @@
 
 <body>
     <!---***********************loading************** -->
-    <!-- <div class="se-pre-con"></div> -->
-    <div class="loadingMask">
-        <section class="loading container">
+    <section class="loadingMask">
+        <div class="loading container">
             <div class="cube row1">
                 <figure class="front-cube">
                     <li></li>
@@ -82,8 +81,8 @@
                     <li></li>
                 </figure>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
     <!-- *********************mask******************** -->
     <div id="mask-nav">
         <ul>
@@ -145,7 +144,6 @@
             <h1>关于我</h1>
             <div class="hr"></div>
             <p>厦门大学研二在读。从hexo开始爱上前端。对于css3的动画效果相当感兴趣。经常琢磨怎么做出好看的动画。</p>
-            <p>左边是github地址，中间是博客，右边为了对称。</p>
         </div>
         <div class="icon-group">
             <a class="icon-link icon1-link" href="https://github.com/kenziD/Resume">
@@ -252,7 +250,7 @@
         <div class="copy">
             &copy kenziD
         </div>
-<!--         <div class="support-wrap"> &nbsp
+        <!--         <div class="support-wrap"> &nbsp
             <div class="support"> 给我点赞,鼓励我一下</div>
         </div> -->
     </footer>
@@ -265,13 +263,6 @@
 </body>
 <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="js/loading.js"></script>
-<!-- loading....... -->
-<script type="text/javascript">
-$(window).load(function() {
-    setTimeout(function() {
-        $(".loadingMask").fadeOut("slow");;
-    }, 1000);
-});
 </script>
 <script type="text/javascript" src="js/myJS.js"></script>
 

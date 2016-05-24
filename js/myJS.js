@@ -205,4 +205,29 @@ $(window).ready(function() {
         $(".joke").removeClass("alert-active");
     });
 
+
+    // vote
+    if(document.cookie == "voteup:true"){
+        console.log("you alreay vote up");
+        $(".vote-up-button").css("background","yellow");
+    }
+    else{
+        console.log("you don't vote up");
+        $(".vote-up-button").css("background","grey");
+    }
+    $(".vote-up-button").click(function() {
+        document.cookie = "voteup:true; path=/;";
+        console.log("click vote up");
+
+        $.ajax({
+            url: "http://localhost:2016/vote",
+            data: {method:"voteup"},
+            type: "POST",
+            success: function(data) {
+                console.log('Success');
+                $(".vote-up-button").css("background","yellow");
+            }
+        })
+    });
+
 });

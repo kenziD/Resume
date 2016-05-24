@@ -717,7 +717,7 @@ footer {
     .joke {
         width: 70vw;
     }
-    #pro-show{
+    #pro-show {
         padding: 0;
     }
 }
@@ -733,4 +733,11 @@ footer {
     footer {
         width: 100%;
     }
+}
+
+.vote-up {
+    cursor: pointer;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
 }

@@ -1,11 +1,297 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+<html>
 
+<head>
+    <title>Resume|kenziD</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/normlize.css">
+    <link rel="stylesheet" type="text/css" href="css/library/font-awesome-4.4.0/css/font-awesome.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/loading.css">
 </head>
+
 <body>
-	<img src="img/bg2.jpg">
+    <!---***********************loading************** -->
+    <section class="loadingMask">
+        <div class="loading container">
+            <div class="cube row1">
+                <figure class="front-cube">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </figure>
+                <figure class="back-cube">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </figure>
+                <figure class="right-cube">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </figure>
+                <figure class="left-cube">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </figure>
+            </div>
+            <div class="cube row2">
+                <figure class="front-cube">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </figure>
+                <figure class="back-cube">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </figure>
+                <figure class="right-cube">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </figure>
+                <figure class="left-cube">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </figure>
+            </div>
+            <div class="cube row3">
+                <figure class="front-cube">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </figure>
+                <figure class="back-cube">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </figure>
+                <figure class="right-cube">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </figure>
+                <figure class="left-cube">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </figure>
+            </div>
+        </div>
+    </section>
+    <!-- *********************mask******************** -->
+    <div id="mask-nav">
+        <ul>
+            <a href="#">
+                <li>
+                    <h1>Home</h1></li>
+            </a>
+            <a href="#recommend">
+                <li>
+                    <h1>Project</h1></li>
+            </a>
+            <a href="#foot">
+                <li>
+                    <h1>Contact Me</h1></li>
+            </a>
+        </ul>
+    </div>
+    <nav id="nav">
+        <ul class="nav-list">
+            <li class="logo">
+                <h1>KenziD</h1></li>
+            <a href="#">
+                <li>Home</li>
+            </a>
+            <a href="#recommend">
+                <li>Project</li>
+            </a>
+            <a href="#foot">
+                <li>Contact Me</li>
+            </a>
+        </ul>
+        <div id="hamburger" class="close">
+            <div class="nav up"></div>
+            <div class="nav middle"></div>
+            <div class="nav down"></div>
+        </div>
+    </nav>
+    <header>
+        <!--         <video id="my-video" class="video" autoplay muted loop>
+            <source src="http://callmenick.com/_development/video/full-screen-background-video/media/demo.mp4" type="video/mp4">
+            <source src="media/demo.ogv" type="video/ogg">
+            <source src="media/demo.webm" type="video/webm"> Your browser doesn't support HTML5 video. Here's a <a href="#">link</a> to download the video.
+        </video> -->
+        <!--nav-->
+        <!-- banner -->
+        <div id="banner">
+            <div class="inner">
+                <h1>刁婉玉</h1>
+                <p>前端爱好者</p>
+            </div>
+            <a>
+                <button id="more"><span>MORE</span></button>
+            </a>
+        </div>
+    </header>
+    <!-- recommend -->
+    <section class="recommend">
+        <div class="wrapper">
+            <h1>关于我</h1>
+            <div class="hr"></div>
+            <p>厦门大学研二在读。从hexo开始爱上前端。对于css3的动画效果相当感兴趣。经常琢磨怎么做出好看的动画。</p>
+        </div>
+        <div class="icon-group">
+            <a class="icon-link icon1-link" href="https://github.com/kenziD/Resume">
+                <img class="icon icon1" src="img/github2.png">
+            </a>
+            <a class="icon-link icon2-link" href="http://kenzid.github.io">
+                <img src="img/kenzi.png" class="icon icon2">
+            </a>
+            <a class="icon-link icon3-link" href="http://twitter.com">
+                <img src="img/twitter.png" class="icon icon3">
+            </a>
+        </div>
+    </section>
+    <!-- skill -->
+    <section id="skill">
+        <h1 class="heading">Skill</h1>
+        <div class="hr"></div>
+        <div class="card-group">
+            <div class="card">
+                <span class="language">C</span>
+                <div class="circle mask"></div>
+                <div class="circle left1"></div>
+                <div class="circle right"></div>
+            </div>
+            <div class="card">
+                <span class="language">CSS</span>
+                <div class="circle mask"></div>
+                <div class="circle left2"></div>
+                <div class="circle right"></div>
+            </div>
+            <div class="card">
+                <span class="language">HTML</span>
+                <div class="circle mask"></div>
+                <div class="circle left3"></div>
+                <div class="circle right"></div>
+            </div>
+            <div class="card">
+                <span class="language">JavaScript</span>
+                <div class="circle mask"></div>
+                <div class="circle left4"></div>
+                <div class="circle right"></div>
+            </div>
+            <div class="card">
+                <span class="language">Python</span>
+                <div class="circle mask"></div>
+                <div class="circle left5"></div>
+                <div class="circle right"></div>
+            </div>
+            <div class="card">
+                <span class="language">R</span>
+                <div class="circle mask"></div>
+                <div class="circle left6"></div>
+                <div class="circle right"></div>
+            </div>
+        </div>
+    </section>
+    <!-- pro-show -->
+    <section id="pro-show">
+        <div class="show-preview">
+            <div class="text-section">
+                <h2 class="text-header"><a href="https://github.com/kenziD/chrome-Extension-Example/tree/master/changeBgColor">Chrome 护眼小插件</a></h2>
+                <div class="text-content">
+                    <p>白色的光太刺眼？用了这款插件就可以享受温和的背景色。支持自己选择区块调色。学校电脑很容易眼疲劳。每次手动修改背景色嫌麻烦后开发了这个小插件。</p>
+                </div>
+            </div>
+            <div class="img-section">
+                <img src="img/logo.png" alt="">
+            </div>
+        </div>
+        <div class="show-preview">
+            <div class="text-section">
+                <h2 class="text-header"><a href="https://github.com/kenziD/arrayToTable">数组转换成表格的接口</a></h2>
+                <div class="text-content">
+                    <p>方便的将数组的内容转换成表格样式。类似于console.table的效果。支持object作为数组元素。</p>
+                </div>
+            </div>
+            <div class="img-section">
+                <img src="img/table.png" alt="">
+            </div>
+        </div>
+        <div class="show-preview">
+            <div class="text-section">
+                <h2 class="text-header"><a href="https://github.com/kenziD/python-spider">股票数据采集</a></h2>
+                <div class="text-content">
+                    <p>
+                        股票分析项目，负责数据采集部分（Python)。爬虫主要采集雪球等网站的股票数据、新闻、网民评论等，大约爬取70万的数据量。爬虫通过分析网站暴露的一些接口，使用多线程爬去、Celery事务管理。大大提高了爬虫速度，从原本的1天减少到2小时就可爬完。爬取的数据使用MongoDB做存储。
+                    </p>
+                </div>
+            </div>
+            <div class="img-section">
+                <a href="#"><img src="img/xueqiu.png" alt=""></a>
+            </div>
+        </div>
+        <div class="show-preview">
+            <div class="text-section">
+                <h2 class="text-header"><a href="https://github.com/kenziD/ANO">无人机项目</a></h2>
+                <div class="text-content">
+                    <p>编写基于捷联惯导系统的四旋翼飞行器的飞控程序（C语言）。其中包括编写角度融合算法、PID算法等，熟悉蓝牙、MPU6050,NRF24L01,陀螺仪、加速度计、磁力计等模块开发。 期间因研究需要开发了基于OpenCV的角度实时量测工具。将opencv处理的图像数据与串口数据进行对比,检测测量准确度(Python)
+                    </p>
+                </div>
+            </div>
+            <div class="img-section">
+                <img src="img/quadcopter.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer id="foot">
+        <div class="share-group">
+            <a href="https://github.com/kenziD/Resume"><i class="logo fa fa-github-alt"></i></a>
+            <a href="http://weibo.com/"><i class="logo fa fa-weibo"></i></a>
+            <a href="http://twitter.com"><i class="logo fa fa-twitter"></i></a>
+            <a><i class="logo fa fa-weixin"></i></a>
+        </div>
+        <div class="copy">
+            &copy kenziD
+        </div>
+        <!--         <div class="support-wrap"> &nbsp
+            <div class="support"> 给我点赞,鼓励我一下</div>
+        </div> -->
+    </footer>
+    <!-- mask -->
+    <div class="shadow-mask"></div>
+    <!-- alert -->
+    <div class="joke">
+        <h1>haha</h1>
+        <p>keep thinking...</p>
+        <button class="close-alert" type="button">ok</button>
+    </div>
+    <div class="vote-up">
+        <button class="vote-up-button">vote</button>
+    </div>
+    <form action="/" method="post">
+        <p>
+            <label for="user">用户名</label>
+            <input type="text" name="userName" id="userName" placeholder="请输入用户名" required>
+        </p>
+        <p>
+            <label for="password">密码</label>
+            <input type="password" name="password" id="password" placeholder="请输入密码">
+        </p>
+        <p>
+            <input type="submit" name="" value="登陆">
+        </p>
+    </form>
 </body>
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/loading.js"></script>
+<script type="text/javascript" src="js/myJS.js"></script>
+
 </html>
